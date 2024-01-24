@@ -19,6 +19,13 @@ export default function useRoutes() {
         }
     }, [location]);
 
+    const changeLanguage = (lang) => {
+        localStorage.setItem("wdz-language", lang);
+        setLanguage(lang);
+    };
+
+    const availableLanguages = ["es", "en"];
+
     const routes = {
         en: [
             {
@@ -146,5 +153,5 @@ export default function useRoutes() {
         ],
     };
 
-    return { language, setLanguage, routes };
+    return { availableLanguages, language, routes, changeLanguage };
 }

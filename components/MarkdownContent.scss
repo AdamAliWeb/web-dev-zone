@@ -1,0 +1,76 @@
+@import "../src/variables";
+
+.separator {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: $second-black;
+    bottom: 0;
+    left: 0;
+}
+
+.markdown-content {
+    h1 {
+        font-size: $inter-font-size-32;
+        font-family: $mono-font;
+        font-size: $mono-big-font-mobile-size;
+        padding-bottom: 0.5rem;
+        position: relative;
+        text-align: center;
+
+        &::after {
+            height: 5px;
+            @extend .separator;
+        }
+    }
+
+    h2 {
+        position: relative;
+        font-size: $inter-font-size-24;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 0.5rem;
+
+        &::after {
+            height: 3px;
+            @extend .separator;
+        }
+    }
+
+    h3 {
+        font-size: $inter-font-size-20;
+    }
+
+    .hljs {
+        border-radius: 0.25rem;
+    }
+
+    a {
+        color: $first-blue;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: $second-black;
+        }
+    }
+
+    table {
+        margin: auto;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    li {
+        text-align: start !important;
+    }
+
+    .hljs {
+        text-align: start;
+        white-space: pre-line;
+        word-break: break-all;
+    }
+}

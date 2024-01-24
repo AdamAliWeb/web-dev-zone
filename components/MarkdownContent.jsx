@@ -1,7 +1,13 @@
 import MarkDown from "markdown-to-jsx";
 import { useState, useEffect } from "react";
+import "./MarkdownContent.scss";
 
-export default function MarkdownContent({ fileName, language }) {
+export default function MarkdownContent({
+    fileName,
+    language,
+    handleLinkTarget,
+    highlightCode,
+}) {
     const [post, setPost] = useState("");
 
     useEffect(() => {
@@ -11,11 +17,19 @@ export default function MarkdownContent({ fileName, language }) {
             })
             .catch((err) => console.log(err));
     });
+
     return (
         <>
-            <section className="markdown-content">
-                <MarkDown>{post}</MarkDown>
-            </section>
+            <MarkDown
+                className="markdown-content"
+                options={{
+                    wrapper: "section",
+                }}
+            >
+                {post}
+            </MarkDown>
+            {handleLinkTarget()}
+            {highlightCode()}
         </>
     );
 }

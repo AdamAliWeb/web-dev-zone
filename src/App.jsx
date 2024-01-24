@@ -1,35 +1,68 @@
 import { BrowserRouter, Link, Navigate, Route, Routes } from "react-router-dom";
-import MarkdownContent from "../components/MarkdownContent";
-import "./App.css";
-import DesktopNavMenu from "../components/DesktopNavMenu";
 import useRoutes from "../hooks/useRoutes";
-import { useEffect } from "react";
+import useDarkTheme from "../hooks/useDarkTheme";
+
+import "highlight.js/styles/atom-one-dark.css";
+import hljs from "highlight.js";
+
+import MarkdownContent from "../components/MarkdownContent";
+import DesktopMenu from "../components/DesktopMenu";
+import { useEffect, useState } from "react";
+import MobileHeader from "../components/MobileHeader";
+import MobileMenu from "../components/MobileMenu";
+
+const initialPage = () => location.pathname.slice(4);
+
+const MIN_WIDTH = 700;
 
 function App() {
-    // const [currentFile, setCurrentFile] = useState("JavaScript_Compilation-en");\
-    const { language, setLanguage, routes } = useRoutes();
+    const { availableLanguages, language, routes, changeLanguage } =
+        useRoutes();
+    const { darkTheme, handleColorThemes } = useDarkTheme();
+    const [currentPage, setCurrentPage] = useState(initialPage);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [mobileLayout, setMobileLayout] = useState(false);
 
-    const changeLanguage = (lang) => {
-        localStorage.setItem("wdz-language", lang);
-        setLanguage(lang);
+    const changeWidth = () => setWindowWidth(window.innerWidth);
+
+    useEffect(() => {
+        if (windowWidth < MIN_WIDTH) setMobileLayout(true);
+        else setMobileLayout(false);
+
+        window.addEventListener("resize", changeWidth);
+
+        return () => window.removeEventListener("resize", changeWidth);
+    }, [windowWidth]);
+
+    const handleLinkTarget = () => {
+        Array.from(document.querySelectorAll(".markdown-content a")).forEach(
+            (link) => (link.target = "_blank")
+        );
     };
 
-    const availableLanguages = ["es", "en"];
+    const highlightCode = () => {
+        hljs.highlightAll();
+        console.clear();
+    };
 
     return (
-        <>
+        <div className={`main-container ${darkTheme ? "" : "dark-theme"}`}>
             <BrowserRouter>
-                {/* {mobileLayout ? <MobileNavMenu /> : <DesktopNavMenu />} */}
-                <main className="main-content">
-                    <Link to="/en" onClick={() => changeLanguage("en")}>
-                        en
-                    </Link>
-                    <br />
-                    <Link to="/es" onClick={() => changeLanguage("es")}>
-                        es
-                    </Link>
+                {mobileLayout ? (
+                    <MobileHeader />
+                ) : (
+                    <DesktopMenu
+                        language={language}
+                        routes={routes}
+                        changeLanguage={changeLanguage}
+                        darkTheme={darkTheme}
+                        handleColorThemes={handleColorThemes}
+                        currentPage={currentPage}
+                        setCurrentPage={setCurrentPage}
+                    />
+                )}
 
-                    <DesktopNavMenu language={language} routes={routes} />
+                <main className="main-content">
                     <Routes>
                         <Route
                             path="/"
@@ -45,6 +78,12 @@ function App() {
                                             path={file.route}
                                             element={
                                                 <MarkdownContent
+                                                    handleLinkTarget={
+                                                        handleLinkTarget
+                                                    }
+                                                    highlightCode={
+                                                        highlightCode
+                                                    }
                                                     fileName={file.fileName}
                                                     language={lang}
                                                 />
@@ -56,8 +95,19 @@ function App() {
                         })}
                     </Routes>
                 </main>
+                {mobileLayout && (
+                    <MobileMenu
+                        language={language}
+                        routes={routes}
+                        changeLanguage={changeLanguage}
+                        darkTheme={darkTheme}
+                        handleColorThemes={handleColorThemes}
+                        currentPage={currentPage}
+                        setCurrentPage={setCurrentPage}
+                    />
+                )}
             </BrowserRouter>
-        </>
+        </div>
     );
 }
 

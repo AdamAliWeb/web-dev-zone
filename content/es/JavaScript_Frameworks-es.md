@@ -54,7 +54,7 @@ También te proporciono algunos videos complementarios sobre **React**, que ser�
 
 -   **[¿Qué es y cómo funciona useEffect? Hooks de React](https://www.youtube.com/watch?v=TBxpAhpQqYk)**
 -   **[Principios SOLID en React.js (Buenas prácticas) con ejemplos prácticos](https://www.youtube.com/watch?v=jKdt-BnTTR0)**
--   **[Aprende a pasar una Prueba Técnica de React. Entiende useMemo, useCallback y useRef [Curso de React]](https://www.youtube.com/watch?v=GOEiMwDJ3lc)**
+-   **[Aprende a pasar una Prueba Técnica de React. Entiende useMemo, useCallback y useRef. Curso de React](https://www.youtube.com/watch?v=GOEiMwDJ3lc)**
 -   **[Pruebas y Accesibilidad - React Testing Library](https://www.youtube.com/watch?v=ZE4galFU5HU)**
 -   **[¡Resuelvo Prueba Técnica de React para Juniors y Trainee!](https://www.youtube.com/watch?v=XYpadB4VadY)**
 -   **[Cómo Consumir APIs en REACT como un PROFESIONAL](https://www.youtube.com/watch?v=6u1RHUoXIPI)**

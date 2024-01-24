@@ -1,0 +1,63 @@
+@use "variables" as *;
+
+@mixin dark-theme {
+    background-color: $second-black;
+    color: $second-white;
+
+    .mobile-header {
+        background-color: $second-blue;
+    }
+
+    .mobile-menu {
+        background-color: $second-blue;
+    }
+
+    .desktop-menu {
+        background-color: $second-blue;
+    }
+
+    .markdown-content {
+        h1::after,
+        h2::after {
+            background-color: $second-white;
+        }
+
+        .hljs {
+            background-color: $first-black;
+        }
+
+        a {
+            color: $second-blue;
+            &:hover {
+                color: $second-white;
+            }
+        }
+    }
+
+    .dropdown-menu.show {
+        background-color: $second-blue;
+    }
+
+    .language-link:hover {
+        color: $second-blue;
+    }
+}
+
+@mixin nav-menu-dark {
+    .nav-menu-header {
+        background-color: $second-blue;
+    }
+
+    .nav-menu-body {
+        background-color: $second-black;
+        color: $second-white;
+    }
+
+    .nav-menu-link {
+        border-bottom: medium solid $second-white;
+
+        &:hover {
+            color: $second-blue;
+        }
+    }
+}

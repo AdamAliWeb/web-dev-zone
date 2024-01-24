@@ -1,0 +1,61 @@
+@import "../src/variables";
+
+.desktop-menu {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 0.5rem;
+    padding-inline: 1.5rem;
+    background-color: $first-blue;
+    z-index: 99;
+}
+
+.menu-options {
+    display: flex;
+    align-items: center;
+}
+
+.menu-link {
+    border: 0;
+    margin-inline: 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.language-link {
+    font-family: "Monomaniac One", monospace;
+    font-size: 32px;
+    text-decoration: none;
+    padding-inline: 1rem;
+    padding-bottom: 0.2rem;
+    background-color: $third-white;
+    color: $second-black;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: $first-blue;
+    }
+}
+
+.theme-link {
+    width: 65.72px;
+    height: 51.19px;
+    padding: 0.25rem;
+    padding-top: 0.15rem;
+    background-color: $third-white;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $second-black;
+        .theme-img {
+            filter: brightness(10);
+        }
+    }
+}
+
+.theme-img {
+    width: 80%;
+    height: auto;
+}

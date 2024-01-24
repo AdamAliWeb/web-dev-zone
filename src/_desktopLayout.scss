@@ -1,0 +1,88 @@
+@use "variables" as *;
+
+@mixin desktop-layout {
+    @media screen and (min-width: 700px) {
+        .main-content {
+            padding-inline: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .wdz-logo {
+            font-size: $mono-big-font-desktop-size;
+        }
+
+        .hamburger-btn {
+            background-color: $third-white;
+            padding-block: 0.425rem;
+            padding-inline: 0.55rem;
+            border-radius: 0.4rem;
+
+            .bar-1,
+            .bar-2,
+            .bar-3 {
+                background-color: $second-black;
+                margin-block: 0.4rem;
+            }
+
+            &:hover {
+                .bar-1,
+                .bar-2,
+                .bar-3 {
+                    background-color: $first-blue;
+                }
+            }
+        }
+
+        .dark-theme {
+            .hamburger-btn:hover {
+                .bar-1,
+                .bar-2,
+                .bar-3 {
+                    background-color: $second-blue;
+                }
+            }
+        }
+
+        .nav-menu {
+            width: 550px !important;
+        }
+
+        .nav-menu-header {
+            font-size: $mono-font-desktop-size;
+            .nav-menu-title {
+                font-size: $mono-big-font-desktop-size;
+            }
+        }
+
+        .nav-menu-body {
+            font-size: $mono-font-desktop-size;
+        }
+
+        .markdown-content {
+            font-size: $inter-font-size-18;
+
+            h1 {
+                font-size: $mono-big-font-desktop-size;
+                text-align: start;
+            }
+
+            h2 {
+                font-size: $inter-font-size-32;
+                text-align: start;
+            }
+
+            h3 {
+                font-size: $inter-font-size-24;
+            }
+
+            table {
+                margin: 0;
+            }
+
+            img {
+                width: 70%;
+                height: auto;
+            }
+        }
+    }
+}

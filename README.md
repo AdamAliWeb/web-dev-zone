@@ -29,6 +29,10 @@
 -   Add TypeScrypt
 -   Add a Conclusion
 -   Add PWA
+-   Definitions - Bold
+-   Text within parenthesys - Italic
+-   Check Tables
+-   Add Redux to the Project
 
 ## Main Parts
 
