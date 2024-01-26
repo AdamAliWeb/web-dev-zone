@@ -1,56 +1,29 @@
-import { BrowserRouter, Link, Navigate, Route, Routes } from "react-router-dom";
-import useRoutes from "../hooks/useRoutes";
-import useDarkTheme from "../hooks/useDarkTheme";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 import "highlight.js/styles/atom-one-dark.css";
-import hljs from "highlight.js";
 
-import MarkdownContent from "../components/MarkdownContent";
+import useRoutes from "../hooks/useRoutes";
+import useLanguages from "../hooks/useLanguages";
+import useDarkTheme from "../hooks/useDarkTheme";
+import useDesktopLayout from "../hooks/useDesktopLayout";
+import useMarkdownChecker from "../hooks/useMarkdownChecker";
+
 import DesktopMenu from "../components/DesktopMenu";
-import { useEffect, useState } from "react";
 import MobileHeader from "../components/MobileHeader";
 import MobileMenu from "../components/MobileMenu";
-
-const initialPage = () => location.pathname.slice(4);
-
-const MIN_WIDTH = 700;
+import MarkdownContent from "../components/MarkdownContent";
 
 function App() {
-    const { availableLanguages, language, routes, changeLanguage } =
-        useRoutes();
+    const { routes, currentPage, setCurrentPage } = useRoutes();
+    const { availableLanguages, language, changeLanguage } = useLanguages();
     const { darkTheme, handleColorThemes } = useDarkTheme();
-    const [currentPage, setCurrentPage] = useState(initialPage);
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const [mobileLayout, setMobileLayout] = useState(false);
-
-    const changeWidth = () => setWindowWidth(window.innerWidth);
-
-    useEffect(() => {
-        if (windowWidth < MIN_WIDTH) setMobileLayout(true);
-        else setMobileLayout(false);
-
-        window.addEventListener("resize", changeWidth);
-
-        return () => window.removeEventListener("resize", changeWidth);
-    }, [windowWidth]);
-
-    const handleLinkTarget = () => {
-        Array.from(document.querySelectorAll(".markdown-content a")).forEach(
-            (link) => (link.target = "_blank")
-        );
-    };
-
-    const highlightCode = () => {
-        hljs.highlightAll();
-        console.clear();
-    };
+    const { desktopLayout } = useDesktopLayout();
+    const { handleLinkTarget, highlightCode } = useMarkdownChecker();
 
     return (
         <div className={`main-container ${darkTheme ? "" : "dark-theme"}`}>
             <BrowserRouter>
-                {mobileLayout ? (
-                    <MobileHeader />
-                ) : (
+                {desktopLayout ? (
                     <DesktopMenu
                         language={language}
                         routes={routes}
@@ -60,6 +33,8 @@ function App() {
                         currentPage={currentPage}
                         setCurrentPage={setCurrentPage}
                     />
+                ) : (
+                    <MobileHeader />
                 )}
 
                 <main className="main-content">
@@ -95,7 +70,7 @@ function App() {
                         })}
                     </Routes>
                 </main>
-                {mobileLayout && (
+                {!desktopLayout && (
                     <MobileMenu
                         language={language}
                         routes={routes}

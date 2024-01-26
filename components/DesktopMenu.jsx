@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
-import "./DesktopMenu.scss";
+
 import NavMenu from "./NavMenu";
 import WebDevZoneLogo from "./WebDevZoneLogo";
+
+import "./DesktopMenu.scss";
 
 export default function DesktopMenu({
     language,

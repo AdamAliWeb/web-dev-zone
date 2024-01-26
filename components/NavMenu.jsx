@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import "./NavMenu.scss";
 
-import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
 export default function NavMenu({
@@ -18,6 +17,7 @@ export default function NavMenu({
     const handleShow = () => setShow(true);
     const handleRoute = (route) => {
         setCurrentPage(route);
+        window.scrollTo(0, 0);
     };
 
     return (

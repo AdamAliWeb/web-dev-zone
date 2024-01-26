@@ -1,6 +1,8 @@
-import MarkDown from "markdown-to-jsx";
 import { useState, useEffect } from "react";
+
 import "./MarkdownContent.scss";
+
+import MarkDown from "markdown-to-jsx";
 
 export default function MarkdownContent({
     fileName,

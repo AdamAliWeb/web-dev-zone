@@ -64,12 +64,13 @@ En el video, la sección de **Emmet** comienza después de 2 horas, 33 minutos y
     ```
 
 -   Si utilizas caracteres especiales básicos (**<, >, &, "**) directamente en el código **HTML**, funcionará correctamente. Sin embargo, al operar con código **JavaScript** o **PHP**, o si no se están mostrando correctamente en la web, necesitarás utilizar terminaciones específicas para insertar estos símbolos. Aquí están las terminaciones correspondientes:
+
     | Terminaciones | Símbolos |
     | ------------- | -------- |
-    | `&lt;` | < |
-    | `&gt;` | > |
-    | `&amp;` | & |
-    | `&quot;` | " |
+    | `&lt;`        | <        |
+    | `&gt;`        | >        |
+    | `&amp;`       | &        |
+    | `&quot;`      | "        |
 
 -   Restringe el empleo de la etiqueta `<iframe>` a un máximo de 2 por página para evitar posibles impactos adversos en el rendimiento.
 

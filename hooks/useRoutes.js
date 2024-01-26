@@ -1,30 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const setInitialLanguage = () => {
-    if (!localStorage.getItem("wdz-language")) {
-        localStorage.setItem("wdz-language", "en");
-    }
-
-    return localStorage.getItem("wdz-language");
-};
+const initialPage = () => location.pathname.slice(4);
 
 export default function useRoutes() {
-    const [language, setLanguage] = useState(setInitialLanguage());
-
-    useEffect(() => {
-        if (location.pathname.startsWith("/en")) {
-            setLanguage("en");
-        } else if (location.pathname.startsWith("/es")) {
-            setLanguage("es");
-        }
-    }, [location]);
-
-    const changeLanguage = (lang) => {
-        localStorage.setItem("wdz-language", lang);
-        setLanguage(lang);
-    };
-
-    const availableLanguages = ["es", "en"];
+    const [currentPage, setCurrentPage] = useState(initialPage);
 
     const routes = {
         en: [
@@ -153,5 +132,5 @@ export default function useRoutes() {
         ],
     };
 
-    return { availableLanguages, language, routes, changeLanguage };
+    return { routes, currentPage, setCurrentPage };
 }

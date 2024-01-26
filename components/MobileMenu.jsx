@@ -1,7 +1,9 @@
-import { ButtonGroup, Dropdown, DropdownButton } from "react-bootstrap";
-import NavMenu from "./NavMenu";
-import "./MobileMenu.scss";
+import { DropdownButton } from "react-bootstrap";
 import { Link } from "react-router-dom";
+
+import "./MobileMenu.scss";
+
+import NavMenu from "./NavMenu";
 
 export default function MobileMenu({
     language,

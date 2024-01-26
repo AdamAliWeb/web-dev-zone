@@ -6,6 +6,8 @@ Esta será una guía rápida y resumida. Te proporcionaré enlaces a artículos 
 
 Como desarrollador, es fundamental tener conocimientos sobre qué es Internet y cómo funciona, ya que es la base de casi todas las aplicaciones modernas. Para desarrollar de manera eficiente y escalable, es necesario tener conocimientos básicos sobre el funcionamiento de Internet. Internet es una red global de computadoras interconectadas que utilizan protocolos estandarizados para comunicarse entre sí. Para obtener una comprensión más profunda de cómo se logra esta conexión entre las computadoras, te dejo un artículo que lo explica en detalle: **[¿Cómo funciona Internet?](https://developer.mozilla.org/es/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)**.
 
+## Tutorial
+
 ### Protocolos
 
 Los protocolos son esenciales ya que permiten el flujo adecuado de los datos a través de diferentes sistemas. Hay diferentes protocolos para diferentes casos de transferencia de datos.

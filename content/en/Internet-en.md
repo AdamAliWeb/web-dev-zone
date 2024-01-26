@@ -6,7 +6,9 @@ This guide offers quick and concise information. It provides links to external a
 
 As a developer, having basic knowledge of the Internet is crucial, as it forms the foundation of most modern applications. To develop efficiently and at scale, understanding the fundamental concepts of Internet functioning is essential. The Internet is a global network of interconnected computers that use standardized protocols to communicate. For a deeper understanding of how computers connect, refer to this article: **[How does the Internet work?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)**
 
-## Protocols
+## Tutorial
+
+### Protocols
 
 Protocols are necessary to ensure the smooth flow of data across different systems. Various protocols cater to different cases of data transfer.
 

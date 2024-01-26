@@ -4,6 +4,8 @@
     -   React
     -   React Router
     -   Bootstrap
+    -   Sass
+    -   Other Libraries
 -   Make the Base Design and functionality of the page;
 -   Make some small projects for each tecnology to demonstrate and practice;
 -   Follow the web procedure;
@@ -29,10 +31,14 @@
 -   Add TypeScrypt
 -   Add a Conclusion
 -   Add PWA
+-   Add Redux to the Project
 -   Definitions - Bold
 -   Text within parenthesys - Italic
 -   Check Tables
--   Add Redux to the Project
+-   Make an Error Page
+-   Make an extra section where is a reference to my personal website
+-   Refactorize SCSS Code
+-   Refactorize React Components
 
 ## Main Parts
 
