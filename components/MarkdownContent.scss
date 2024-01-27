@@ -1,19 +1,16 @@
-@import "../src/variables";
+@use "../src/variables" as *;
 
 .separator {
     content: "";
     position: absolute;
     width: 100%;
-    background-color: $second-black;
     bottom: 0;
     left: 0;
 }
 
 .markdown-content {
     h1 {
-        font-size: $inter-font-size-32;
         font-family: $mono-font;
-        font-size: $mono-big-font-mobile-size;
         padding-bottom: 0.5rem;
         position: relative;
         text-align: center;
@@ -26,7 +23,6 @@
 
     h2 {
         position: relative;
-        font-size: $inter-font-size-24;
         font-weight: bold;
         text-align: center;
         padding-bottom: 0.5rem;
@@ -37,25 +33,22 @@
         }
     }
 
-    h3 {
-        font-size: $inter-font-size-20;
-    }
-
     .hljs {
         border-radius: 0.25rem;
     }
 
     a {
-        color: $first-blue;
         transition: all 0.3s ease;
-
-        &:hover {
-            color: $second-black;
-        }
     }
 
     table {
-        margin: auto;
+        margin: 1.5rem auto;
+
+        td,
+        th {
+            padding: 0.5rem;
+            border: medium solid $second-white;
+        }
     }
 
     img {

@@ -1,23 +1,20 @@
-@import "../src/variables";
+@use "../src/variables" as *;
 
 .wdz-logo {
     font-family: $mono-font;
-    font-size: $mono-big-font-mobile-size;
     margin-top: -0.5rem;
-}
 
-.wdz-logo-part {
-    text-shadow: 0 4px 4px #00000040;
-}
+    .wdz-logo-part {
+        text-shadow: 0 4px 4px #00000040;
+    }
 
-.wdz-logo-part.part-1 {
-    color: $second-black;
-}
-
-.wdz-logo-part.part-2 {
-    color: $first-white;
-}
-
-.wdz-logo-part.part-3 {
-    color: $third-white;
+    .part-1 {
+        color: $second-black;
+    }
+    .part-2 {
+        color: $first-white;
+    }
+    .part-3 {
+        color: $third-white;
+    }
 }

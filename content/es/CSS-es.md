@@ -61,14 +61,14 @@ Además, te proporciono una serie de videos que, si bien no son obligatorios, te
 
 -   Comúnmente, se utilizan los siguientes puntos de interrupción según la resolución del dispositivo:
 
-    | Tamaños | Ámbito                                                                                                       |
-    | ------- | ------------------------------------------------------------------------------------------------------------ |
-    | 320px   | Dispositivos con pantallas pequeñas, como teléfonos en modo vertical.                                        |
-    | 480px   | Dispositivos con pantallas pequeñas, como teléfonos, en modo horizontal.                                     |
-    | 600px   | Tabletas pequeñas, como Amazon Kindle (600×800) y Barnes & Noble Nook (600×1024), en modo vertical.          |
-    | 768px   | Tabletas de diez pulgadas como iPad (768×1024), en modo vertical.                                            |
-    | 1024px  | Tabletas como iPad (1024×768), en modo horizontal, y algunas pantallas de portátiles, netbooks y escritorio. |
-    | 1200px  | Pantallas panorámicas, principalmente portátiles y de escritorio.                                            |
+    | Ancho de la Pantalla | Ámbito                                                                                                       |
+    | -------------------- | ------------------------------------------------------------------------------------------------------------ |
+    | 320px                | Dispositivos con pantallas pequeñas, como teléfonos en modo vertical.                                        |
+    | 480px                | Dispositivos con pantallas pequeñas, como teléfonos, en modo horizontal.                                     |
+    | 600px                | Tabletas pequeñas, como Amazon Kindle (600×800) y Barnes & Noble Nook (600×1024), en modo vertical.          |
+    | 768px                | Tabletas de diez pulgadas como iPad (768×1024), en modo vertical.                                            |
+    | 1024px               | Tabletas como iPad (1024×768), en modo horizontal, y algunas pantallas de portátiles, netbooks y escritorio. |
+    | 1200px               | Pantallas panorámicas, principalmente portátiles y de escritorio.                                            |
 
 -   En las media queries, es más recomendable usar las propiedades min-width y max-height con valores en `ems` en lugar de pixeles. Aunque los pixeles se consideran unidades absolutas, en realidad son relativas a la resolución de pantalla del dispositivo. Si el dispositivo tiene una densidad mayor, la proporción de los pixeles cambia. Por ello, es importante que los puntos de quiebre (_breakpoints_) de las media queries se expresen en `ems`, que son unidades relativas y proporcionales. Aquí tienes la conversión de `px` a `em`, basada en la fuente base de `16px` (`320px / 16px = 20em`):
 

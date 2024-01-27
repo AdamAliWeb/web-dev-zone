@@ -1,22 +1,19 @@
-### Code
+# WebDevZone Guide and Plan
 
--   Technologies to use:
+## Code
+
+-   Technology Stack:
     -   React
     -   React Router
     -   Bootstrap
     -   Sass
-    -   Other Libraries
--   Make the Base Design and functionality of the page;
--   Make some small projects for each tecnology to demonstrate and practice;
--   Follow the web procedure;
--   Create a route system for the languages Spanish and English so depending on the route the content renders in spanish or in english (different content depending on the language);
--   Make a light and a night theme
+-   Add Redux to the Project
 -   Add a way to my page for contacting me if there is any gramatical or functional issue
+-   Refactorize the styles to use more bootstrap
 
-### Content:
+## Content:
 
 -   Make general questions for each technology for knowledge and interviews
--   Add videos from watched programming videos
 -   Complement with more resources:
     -   JavaScript
     -   Git
@@ -31,16 +28,11 @@
 -   Add TypeScrypt
 -   Add a Conclusion
 -   Add PWA
--   Add Redux to the Project
 -   Definitions - Bold
 -   Text within parenthesys - Italic
--   Check Tables
--   Make an Error Page
 -   Make an extra section where is a reference to my personal website
--   Refactorize SCSS Code
--   Refactorize React Components
 
-## Main Parts
+## Sections
 
 ### Frontend:
 
@@ -80,28 +72,28 @@
 
 ### Only in Spanish
 
--   Aprendizaje del Ingles
+-   English Learning
 
-### Todo List of Each Section:
+## Todo List
 
 #### JavaScript Frameworks
 
--   Agregar Curso de react router y react redux (es, en)
+-   Add the React Router and React Redux Courses (es, en)
 
 #### Internet
 
--   Agregar Explicacion sobre los navegadores (es, en)
+-   Add an explanation of the browsers (es, en)
 
 #### SEO
 
--   Agregar Page Speed Insights (es, en)
--   Agregar Google Search Console y sus comandos (es, en)
+-   Add Page Speed Insights (es, en)
+-   Add Google Search Console and its commands (es, en)
 -   Site:, Cache:, (es, en)
 
 #### Web Procedure
 
--   Calibrar tiempo dedicado a cada proyecto
--   Definir el orden de creacion de un proyecto asi: contenido, diseño, codigo
+-   Calibrate dedicated time to each project
+-   Define an order of creation of each project like this: content, design, code (specify that it could differ)
 
 #### Interview Preparation
 

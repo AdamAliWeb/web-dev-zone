@@ -9,7 +9,7 @@ export default function useDesktopLayout() {
     const changeWidth = () => setWindowWidth(window.innerWidth);
 
     useEffect(() => {
-        if (windowWidth > MIN_WIDTH) setDesktopLayout(true);
+        if (windowWidth >= MIN_WIDTH) setDesktopLayout(true);
         else setDesktopLayout(false);
 
         window.addEventListener("resize", changeWidth);

@@ -1,14 +1,27 @@
 @use "variables" as *;
+@use "fontSizes" as *;
 
 @mixin desktop-layout {
+    @include font-sizes(
+        $mono-font-mobile-size,
+        $mono-big-font-mobile-size,
+        $inter-font-size-28,
+        $inter-font-size-20,
+        $inter-font-size-16
+    );
+
     @media screen and (min-width: 700px) {
+        @include font-sizes(
+            $mono-font-desktop-size,
+            $mono-big-font-desktop-size,
+            $inter-font-size-32,
+            $inter-font-size-24,
+            $inter-font-size-18
+        );
+
         .main-content {
             padding-inline: 2rem;
             padding-bottom: 2rem;
-        }
-
-        .wdz-logo {
-            font-size: $mono-big-font-desktop-size;
         }
 
         .hamburger-btn {
@@ -33,12 +46,16 @@
             }
         }
 
+        .options-menu {
+            flex-direction: row;
+        }
+
         .dark-theme {
             .hamburger-btn:hover {
                 .bar-1,
                 .bar-2,
                 .bar-3 {
-                    background-color: $second-blue;
+                    background-color: $first-blue;
                 }
             }
         }
@@ -47,36 +64,17 @@
             width: 550px !important;
         }
 
-        .nav-menu-header {
-            font-size: $mono-font-desktop-size;
-            .nav-menu-title {
-                font-size: $mono-big-font-desktop-size;
-            }
-        }
-
-        .nav-menu-body {
-            font-size: $mono-font-desktop-size;
-        }
-
         .markdown-content {
-            font-size: $inter-font-size-18;
-
             h1 {
-                font-size: $mono-big-font-desktop-size;
                 text-align: start;
             }
 
             h2 {
-                font-size: $inter-font-size-32;
                 text-align: start;
             }
 
-            h3 {
-                font-size: $inter-font-size-24;
-            }
-
             table {
-                margin: 0;
+                margin-inline: 0;
             }
 
             img {

@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
-
 import NavMenu from "./NavMenu";
 import WebDevZoneLogo from "./WebDevZoneLogo";
+import OptionsMenu from "./OptionsMenu";
 
 import "./DesktopMenu.scss";
 
@@ -16,46 +15,19 @@ export default function DesktopMenu({
 }) {
     return (
         <header className="desktop-menu">
-            <article className="menu-options">
+            <OptionsMenu
+                changeLanguage={changeLanguage}
+                darkTheme={darkTheme}
+                handleColorThemes={handleColorThemes}
+                currentPage={currentPage}
+            >
                 <NavMenu
                     language={language}
                     routes={routes}
                     darkTheme={darkTheme}
                     setCurrentPage={setCurrentPage}
                 />
-                <Link
-                    className="menu-link language-link"
-                    to={`/en${currentPage ? "/" + currentPage : ""}`}
-                    onClick={() => changeLanguage("en")}
-                >
-                    EN
-                </Link>
-                <Link
-                    className="menu-link language-link"
-                    to={`/es${currentPage ? "/" + currentPage : ""}`}
-                    onClick={() => changeLanguage("es")}
-                >
-                    ES
-                </Link>
-                <button
-                    className="menu-link theme-link"
-                    onClick={handleColorThemes}
-                >
-                    {darkTheme ? (
-                        <img
-                            className="theme-img"
-                            src="../assets/img/dark-theme.svg"
-                            alt="Dark Theme Logo"
-                        />
-                    ) : (
-                        <img
-                            className="theme-img"
-                            src="../assets/img/light-theme.svg"
-                            alt="Light Theme Logo"
-                        />
-                    )}
-                </button>
-            </article>
+            </OptionsMenu>
             <WebDevZoneLogo />
         </header>
     );

@@ -6,22 +6,25 @@ import useRoutes from "../hooks/useRoutes";
 import useLanguages from "../hooks/useLanguages";
 import useDarkTheme from "../hooks/useDarkTheme";
 import useDesktopLayout from "../hooks/useDesktopLayout";
-import useMarkdownChecker from "../hooks/useMarkdownChecker";
 
 import DesktopMenu from "../components/DesktopMenu";
 import MobileHeader from "../components/MobileHeader";
 import MobileMenu from "../components/MobileMenu";
 import MarkdownContent from "../components/MarkdownContent";
+import ErrorPage from "../components/ErrorPage";
 
 function App() {
     const { routes, currentPage, setCurrentPage } = useRoutes();
     const { availableLanguages, language, changeLanguage } = useLanguages();
     const { darkTheme, handleColorThemes } = useDarkTheme();
     const { desktopLayout } = useDesktopLayout();
-    const { handleLinkTarget, highlightCode } = useMarkdownChecker();
 
     return (
-        <div className={`main-container ${darkTheme ? "" : "dark-theme"}`}>
+        <div
+            className={`main-container ${
+                darkTheme ? "light-theme" : "dark-theme"
+            }`}
+        >
             <BrowserRouter>
                 {desktopLayout ? (
                     <DesktopMenu
@@ -53,12 +56,6 @@ function App() {
                                             path={file.route}
                                             element={
                                                 <MarkdownContent
-                                                    handleLinkTarget={
-                                                        handleLinkTarget
-                                                    }
-                                                    highlightCode={
-                                                        highlightCode
-                                                    }
                                                     fileName={file.fileName}
                                                     language={lang}
                                                 />
@@ -68,7 +65,16 @@ function App() {
                                 </Route>
                             );
                         })}
+                        <Route
+                            path="*"
+                            element={
+                                <ErrorPage errorTitle="Error 404: Page not Found" />
+                            }
+                        />
                     </Routes>
+                    <h2 className="text-danger">
+                        This website is currently under development (v0.4).
+                    </h2>
                 </main>
                 {!desktopLayout && (
                     <MobileMenu

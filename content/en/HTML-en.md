@@ -64,12 +64,13 @@ For website developers dealing with **HTML** files, a basic editor might not suf
     ```
 
 -   If you use special characters like `<, >, &, "`, it's crucial to use specific shortcuts in your **HTML** code. This ensures they display correctly when using **JavaScript** or **PHP** code. Here are the expected shortcuts:
+
     | Shortcuts | Symbols |
-    | ------------- | -------- |
-    | `&lt;` | < |
-    | `&gt;` | > |
-    | `&amp;` | & |
-    | `&quot;` | " |
+    | --------- | ------- |
+    | `&lt;`    | <       |
+    | `&gt;`    | >       |
+    | `&amp;`   | &       |
+    | `&quot;`  | "       |
 
 -   To optimize performance, restrict the use of the `<iframe>` tag to a maximum of two per page.
 

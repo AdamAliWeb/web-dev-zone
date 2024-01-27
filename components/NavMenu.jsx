@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Offcanvas from "react-bootstrap/Offcanvas";
 
 import "./NavMenu.scss";
-
-import Offcanvas from "react-bootstrap/Offcanvas";
 
 export default function NavMenu({
     language,
@@ -33,7 +32,9 @@ export default function NavMenu({
             </button>
 
             <Offcanvas
-                className={`nav-menu ${darkTheme ? "" : "nav-menu-dark"}`}
+                className={`nav-menu ${
+                    darkTheme ? "nav-menu-light" : "nav-menu-dark"
+                }`}
                 show={show}
                 onHide={handleClose}
             >

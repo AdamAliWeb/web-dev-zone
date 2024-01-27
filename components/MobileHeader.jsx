@@ -1,6 +1,6 @@
-import "./MobileHeader.scss";
-
 import WebDevZoneLogo from "./WebDevZoneLogo";
+
+import "./MobileHeader.scss";
 
 export default function MobileHeader() {
     return (

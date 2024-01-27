@@ -46,14 +46,14 @@ With **CSS**, you can establish rules that instruct your website on how to prese
 
 -   Common breakpoints for device resolutions are as follows:
 
-    | Sizes  | Scope                                                                                                 |
-    | ------ | ----------------------------------------------------------------------------------------------------- |
-    | 320px  | Devices with small screens, like phones, in vertical mode.                                            |
-    | 480px  | Devices with small screens, like phones, in horizontal mode.                                          |
-    | 600px  | Small tablets, like the Amazon Kindle (600x800) and Barnes & Noble Nook (600x1024), in vertical mode. |
-    | 768px  | 10-inch tablets like the iPad (768x1024), in vertical mode.                                           |
-    | 1024px | Tablets like the iPad (1024x768), in horizontal mode, and some laptop, netbook, and desktop screens.  |
-    | 1200px | Panoramic screens, mostly laptops and PCs.                                                            |
+    | Screen Sizes | Scope                                                                                                 |
+    | ------------ | ----------------------------------------------------------------------------------------------------- |
+    | 320px        | Devices with small screens, like phones, in vertical mode.                                            |
+    | 480px        | Devices with small screens, like phones, in horizontal mode.                                          |
+    | 600px        | Small tablets, like the Amazon Kindle (600x800) and Barnes & Noble Nook (600x1024), in vertical mode. |
+    | 768px        | 10-inch tablets like the iPad (768x1024), in vertical mode.                                           |
+    | 1024px       | Tablets like the iPad (1024x768), in horizontal mode, and some laptop, netbook, and desktop screens.  |
+    | 1200px       | Panoramic screens, mostly laptops and PCs.                                                            |
 
 -   When using media queries, it's recommended to use the `min-width` and `max-height` properties with `ems` rather than pixels. Pixels are considered absolute units, but in reality, they are relative to the screen's resolution. If a device has a higher density, the proportion of the pixels changes. That's why it's important to express the breakpoints of media queries in `ems`, which are relative and proportional units. For example, `320px / 16px = 20em`.
 

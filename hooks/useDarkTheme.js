@@ -5,7 +5,7 @@ const initialDarkTheme = () => {
         localStorage.setItem("wdz-dark", "light");
     }
 
-    return localStorage.getItem("wdz-dark") === "dark" ? true : false;
+    return localStorage.getItem("wdz-dark") === "dark" ? false : true;
 };
 
 export default function useDarkTheme() {
@@ -14,10 +14,10 @@ export default function useDarkTheme() {
     const handleColorThemes = () => {
         if (!darkTheme) {
             setDarkTheme(true);
-            localStorage.setItem("wdz-dark", "dark");
+            localStorage.setItem("wdz-dark", "light");
         } else {
             setDarkTheme(false);
-            localStorage.setItem("wdz-dark", "light");
+            localStorage.setItem("wdz-dark", "dark");
         }
     };
 

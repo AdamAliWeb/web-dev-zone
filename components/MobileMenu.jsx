@@ -1,9 +1,8 @@
 import { DropdownButton } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import NavMenu from "./NavMenu";
+import OptionsMenu from "./OptionsMenu";
 
 import "./MobileMenu.scss";
-
-import NavMenu from "./NavMenu";
 
 export default function MobileMenu({
     language,
@@ -20,43 +19,16 @@ export default function MobileMenu({
                 className="dropdown-btn"
                 key={"up-centered"}
                 id={`dropdown-button-drop-up-centered`}
+                title={""}
                 drop={"up-centered"}
                 variant="secondary"
             >
-                <Link
-                    className="menu-link language-link"
-                    to={`/en${currentPage ? "/" + currentPage : ""}`}
-                    onClick={() => changeLanguage("en")}
-                >
-                    EN
-                </Link>
-
-                <Link
-                    className="menu-link language-link"
-                    to={`/es${currentPage ? "/" + currentPage : ""}`}
-                    onClick={() => changeLanguage("es")}
-                >
-                    ES
-                </Link>
-
-                <button
-                    className="menu-link theme-link"
-                    onClick={handleColorThemes}
-                >
-                    {darkTheme ? (
-                        <img
-                            className="theme-img"
-                            src="../assets/img/dark-theme.svg"
-                            alt="Dark Theme Logo"
-                        />
-                    ) : (
-                        <img
-                            className="theme-img"
-                            src="../assets/img/light-theme.svg"
-                            alt="Light Theme Logo"
-                        />
-                    )}
-                </button>
+                <OptionsMenu
+                    changeLanguage={changeLanguage}
+                    darkTheme={darkTheme}
+                    handleColorThemes={handleColorThemes}
+                    currentPage={currentPage}
+                />
             </DropdownButton>
             <NavMenu
                 language={language}

@@ -1,15 +1,11 @@
 import { useState, useEffect } from "react";
+import MarkDown from "markdown-to-jsx";
+import useMarkdownChecker from "../hooks/useMarkdownChecker";
 
 import "./MarkdownContent.scss";
 
-import MarkDown from "markdown-to-jsx";
-
-export default function MarkdownContent({
-    fileName,
-    language,
-    handleLinkTarget,
-    highlightCode,
-}) {
+export default function MarkdownContent({ fileName, language }) {
+    const { handleLinkTarget, highlightCode } = useMarkdownChecker();
     const [post, setPost] = useState("");
 
     useEffect(() => {

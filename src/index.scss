@@ -1,15 +1,16 @@
 @use "bootstrap/scss/bootstrap";
 @use "variables" as *;
-@use "darkTheme" as *;
+@use "theme" as *;
 @use "desktopLayout" as *;
 
 :root {
     font-size: 16px;
     box-sizing: border-box;
+    scroll-behavior: initial;
 }
 
 body {
-    font-family: "Inter", sans-serif !important;
+    font-family: $inter-font !important;
 }
 
 *,
@@ -23,6 +24,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
     background-color: $second-white;
     color: $second-black;
 }
@@ -34,12 +36,29 @@ body {
     word-break: break-word;
 }
 
+.light-theme {
+    @include main-theme($first-blue, $second-white, $second-black);
+}
+
+.nav-menu-light {
+    @include nav-theme($first-blue, $second-white, $second-black, $first-white);
+}
+
 .dark-theme {
-    @include dark-theme;
+    @include main-theme($second-blue, $second-black, $second-white);
+
+    .hljs {
+        background-color: $first-black;
+    }
 }
 
 .nav-menu-dark {
-    @include nav-menu-dark;
+    @include nav-theme(
+        $second-blue,
+        $second-black,
+        $second-white,
+        $first-black
+    );
 }
 
 @include desktop-layout;
