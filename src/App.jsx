@@ -1,10 +1,4 @@
-import {
-    BrowserRouter,
-    HashRouter,
-    Navigate,
-    Route,
-    Routes,
-} from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 
 import "highlight.js/styles/atom-one-dark.css";
 
