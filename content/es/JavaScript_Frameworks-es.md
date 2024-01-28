@@ -64,7 +64,7 @@ No descarto la posibilidad de agregar contenido sobre otras librerías o _framew
 ## Recursos
 
 -   Esto es una imagen de cómo deberían estar organizadas las carpetas de tus proyectos en **React**:
-    **![Estructura de Proyectos con React](../assets/react-project-structure.jpg)**
+    ![Estructura de Proyectos con React](./assets/react-project-structure.jpg)
 
 ## Consejos, Trucos y Buenas Prácticas
 

@@ -38,13 +38,13 @@ export default function ({
                 {darkTheme ? (
                     <img
                         className="theme-img"
-                        src="../assets/img/dark-theme.svg"
+                        src="./assets/img/dark-theme.svg"
                         alt="Dark Theme Logo"
                     />
                 ) : (
                     <img
                         className="theme-img"
-                        src="../assets/img/light-theme.svg"
+                        src="./assets/img/light-theme.svg"
                         alt="Light Theme Logo"
                     />
                 )}

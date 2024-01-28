@@ -64,7 +64,7 @@ Additionally, here's some extra content about **Visual Studio Code**:
 
 -   **[Extended Syntax](https://www.markdownguide.org/extended-syntax/)**.
 
--   I've created a concise guide of **Bash** commands for you: **[Terminal Guide](../assets/bash-en.md)**
+-   I've created a concise guide of **Bash** commands for you: **[Terminal Guide](./assets/bash-en.md)**
 
 ## Tips, Tricks, and Best Practices
 

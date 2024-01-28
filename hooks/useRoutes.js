@@ -1,9 +1,7 @@
 import { useState } from "react";
 
-const initialPage = () => location.pathname.slice(4);
-
 export default function useRoutes() {
-    const [currentPage, setCurrentPage] = useState(initialPage);
+    const [currentPage, setCurrentPage] = useState("");
 
     const routes = {
         en: [
