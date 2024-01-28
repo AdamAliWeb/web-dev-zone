@@ -12,7 +12,7 @@ Another related piece of advice would be to check the descriptions of the exerci
 \r
 So, in summary, it's advisable to create separate folders for course code and guides, projects and exercises, and additional items like default styles or personal programming-related data. Here's an example of how I've organized it:\r
 \r
-![Programming folder structure](../assets/programming-folders-structure-en.jpg)\r
+![Programming folder structure](./assets/programming-folders-structure-en.jpg)\r
 \r
 I recommend keeping all this data in a synchronized cloud folder (as long as it's not too large). This way, any changes you make will be automatically updated, and in case something happens to your PC, you can easily recover the data. You can choose any cloud storage service, but personally, I recommend **Mega**. It offers a generous 50 GB of free storage and a lot of customization options. If you're unsure how to set up your storage in **Mega**, here's a helpful video tutorial: **[How to Download MegaSync and Create Mega Account](www.youtube.com/watch?v=wdmmrzrr_XA)**. I recommend using the synchronization option for a specific folder. This way, any changes you make in that folder will be applied to the cloud folder.\r
 \r

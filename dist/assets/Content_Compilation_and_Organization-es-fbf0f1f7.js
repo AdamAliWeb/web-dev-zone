@@ -14,7 +14,7 @@ Otro consejo relacionado sería que, en los videos de ejercicios o proyectos que
 \r
 Así que, resumiendo, es recomendable tener una carpeta para el código y las guías de los cursos, otra para el código de tus proyectos y ejercicios, y una última carpeta para cosas adicionales como estilos por defecto o archivos personales relacionados con la programación. Aquí te dejo un ejemplo de cómo lo tengo yo organizado:\r
 \r
-![Estructura de carpetas sobre programación](../assets/programming-folders-structure-es.jpg)\r
+![Estructura de carpetas sobre programación](./assets/programming-folders-structure-es.jpg)\r
 \r
 Te sugiero mantener los archivos de programación sincronizados en la nube (si no son demasiado pesados). De esta manera, los cambios se guardarán automáticamente y si surge algún problema con tu computadora, podrás recuperar los datos sin inconvenientes. Puedes elegir cualquier servicio de almacenamiento en la nube; personalmente recomiendo **Mega**, que ofrece 50 GB gratuitos por cuenta y permite sincronización personalizada desde el principio. Si no sabes cómo ajustar archivos y carpetas específicas con **Mega**, aquí tienes un video-tutorial exacto sobre cómo hacerlo: **[MEGA - Sincronizar Carpetas Con La NUBE / Almacenamiento En La Nube / Discos Virtuales](https://www.youtube.com/watch?v=Y9g3bnrYUuQ)**\r
 \r

@@ -61,7 +61,7 @@ While I won't rule out the possibility of adding more content on other libraries
 ## Resources\r
 \r
 -   This image illustrates an advisable way to organize the folders in your **React** projects:\r
-    ![React Project Structure](../assets/react-project-structure.jpg)\r
+    ![React Project Structure](./assets/react-project-structure.jpg)\r
 \r
 ## Tips, Tricks, and Best Practices\r
 \r
