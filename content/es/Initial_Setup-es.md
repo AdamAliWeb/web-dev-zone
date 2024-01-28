@@ -56,7 +56,7 @@ También te proporciono otro video que será útil una vez hayas utilizado **Vis
 
 -   Una guía completa sobre el formato **Markdown**, en caso de que necesites realizar tareas más avanzadas o desees tener una referencia más extensa. Puedes encontrarla aquí: **[markdown](https://joedicastro.com/pages/markdown.html)**
 
--   Una guía resumida de comandos de **Bash** creada por mí: **[Guía de la Terminal](../assets/Bash-es.md)**
+-   Una guía resumida de comandos de **Bash** creada por mí: **[Guía de la Terminal](../assets/bash-es.md)**
 
 ## Consejos, Trucos y Buenas Prácticas
 

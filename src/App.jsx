@@ -1,4 +1,10 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import {
+    BrowserRouter,
+    HashRouter,
+    Navigate,
+    Route,
+    Routes,
+} from "react-router-dom";
 
 import "highlight.js/styles/atom-one-dark.css";
 
@@ -25,7 +31,7 @@ function App() {
                 darkTheme ? "light-theme" : "dark-theme"
             }`}
         >
-            <BrowserRouter>
+            <HashRouter>
                 {desktopLayout ? (
                     <DesktopMenu
                         language={language}
@@ -87,7 +93,7 @@ function App() {
                         setCurrentPage={setCurrentPage}
                     />
                 )}
-            </BrowserRouter>
+            </HashRouter>
         </div>
     );
 }

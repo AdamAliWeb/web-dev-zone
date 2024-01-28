@@ -59,10 +59,12 @@ Additionally, here's some extra content about **Visual Studio Code**:
 -   Here is the official **[Markdown documentation](https://www.markdownguide.org)**. These are the sections of interest:
 
 -   **[Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)**
+
 -   **[Basic Syntax](https://www.markdownguide.org/basic-syntax/)**
+
 -   **[Extended Syntax](https://www.markdownguide.org/extended-syntax/)**.
 
--   I've created a concise guide of **Bash** commands for you: **[Terminal Guide](../assets/Bash-en.md)**
+-   I've created a concise guide of **Bash** commands for you: **[Terminal Guide](../assets/bash-en.md)**
 
 ## Tips, Tricks, and Best Practices
 

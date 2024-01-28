@@ -10,6 +10,8 @@
 -   Add Redux to the Project
 -   Add a way to my page for contacting me if there is any gramatical or functional issue
 -   Refactorize the styles to use more bootstrap
+-   Solve the issue that after a reload of the page if you click a language button it takes you to the index page
+-   Solve the issue that after typing and going to other sections and when clicking the language button it takes to the previous page
 
 ## Content:
 
