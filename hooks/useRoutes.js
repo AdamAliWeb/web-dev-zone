@@ -11,6 +11,11 @@ export default function useRoutes() {
                 title: "Introduction",
             },
             {
+                fileName: `English_Learning-en`,
+                route: "english-learning",
+                title: "English Learning",
+            },
+            {
                 fileName: `Initial_Setup-en`,
                 route: "initial-setup",
                 title: "Initial Setup",
@@ -65,12 +70,37 @@ export default function useRoutes() {
                 route: "css-processing",
                 title: "CSS Processing",
             },
+            {
+                fileName: `Web_Procedure-en`,
+                route: "web-procedure",
+                title: "Web Procedure",
+            },
+            {
+                fileName: `SEO-en`,
+                route: "seo",
+                title: "SEO",
+            },
+            {
+                fileName: `Figma-en`,
+                route: "figma",
+                title: "Figma",
+            },
+            {
+                fileName: `Extra-en`,
+                route: "extra",
+                title: "Extra",
+            },
         ],
         es: [
             {
                 fileName: `Introduction-es`,
                 route: "",
                 title: "Introducción",
+            },
+            {
+                fileName: `English_Learning-es`,
+                route: "english-learning",
+                title: "Aprendizaje de Inglés",
             },
             {
                 fileName: `Initial_Setup-es`,
@@ -126,6 +156,26 @@ export default function useRoutes() {
                 fileName: `CSS_Processing-es`,
                 route: "css-processing",
                 title: "Procesamiento de CSS",
+            },
+            {
+                fileName: `Web_Procedure-es`,
+                route: "web-procedure",
+                title: "Procedimiento Web",
+            },
+            {
+                fileName: `SEO-es`,
+                route: "seo",
+                title: "SEO",
+            },
+            {
+                fileName: `Figma-es`,
+                route: "figma",
+                title: "Figma",
+            },
+            {
+                fileName: `Extra-es`,
+                route: "extra",
+                title: "Extra",
             },
         ],
     };

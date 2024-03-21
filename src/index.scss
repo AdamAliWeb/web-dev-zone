@@ -50,6 +50,10 @@ body {
     .hljs {
         background-color: $first-black;
     }
+
+    .loader {
+        filter: invert(1);
+    }
 }
 
 .nav-menu-dark {

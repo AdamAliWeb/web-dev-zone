@@ -72,9 +72,6 @@ function App() {
                             }
                         />
                     </Routes>
-                    <h2 className="text-danger">
-                        This website is currently under development (v0.4).
-                    </h2>
                 </main>
                 {!desktopLayout && (
                     <MobileMenu

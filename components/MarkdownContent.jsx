@@ -1,33 +1,43 @@
-import { useState, useEffect } from "react";
 import MarkDown from "markdown-to-jsx";
 import useMarkdownChecker from "../hooks/useMarkdownChecker";
 
 import "./MarkdownContent.scss";
+import ErrorPage from "./ErrorPage";
 
 export default function MarkdownContent({ fileName, language }) {
-    const { handleLinkTarget, highlightCode } = useMarkdownChecker();
-    const [post, setPost] = useState("");
+    const { post, loading, failedResponse, handleLinkTarget, highlightCode } =
+        useMarkdownChecker(fileName, language);
 
-    useEffect(() => {
-        import(`../content/${language}/${fileName}.md?raw`)
-            .then((res) => {
-                setPost(res.default);
-            })
-            .catch((err) => console.log(err));
-    });
-
-    return (
-        <>
-            <MarkDown
-                className="markdown-content"
-                options={{
-                    wrapper: "section",
-                }}
-            >
-                {post}
-            </MarkDown>
-            {handleLinkTarget()}
-            {highlightCode()}
-        </>
-    );
+    if (loading) {
+        return (
+            <>
+                <img
+                    className="loader"
+                    src="/assets/img/tail-spin.svg"
+                    alt="Loader"
+                />
+            </>
+        );
+    } else if (failedResponse) {
+        return (
+            <>
+                <ErrorPage errorTitle="Error: Something failed, please try again." />
+            </>
+        );
+    } else {
+        return (
+            <>
+                <MarkDown
+                    className="markdown-content"
+                    options={{
+                        wrapper: "section",
+                    }}
+                >
+                    {post}
+                </MarkDown>
+                {handleLinkTarget()}
+                {highlightCode()}
+            </>
+        );
+    }
 }
