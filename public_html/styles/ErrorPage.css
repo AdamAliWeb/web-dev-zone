@@ -1,0 +1,8 @@
+.error-page {
+  display: flex;
+  align-items: center;
+}
+
+.error-title {
+  font-family: "Monomaniac One", monospace;
+}/*# sourceMappingURL=ErrorPage.css.map */

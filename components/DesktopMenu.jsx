@@ -7,6 +7,7 @@ import "./DesktopMenu.scss";
 export default function DesktopMenu({
     language,
     routes,
+    parseRoute,
     changeLanguage,
     darkTheme,
     handleColorThemes,
@@ -24,6 +25,7 @@ export default function DesktopMenu({
                 <NavMenu
                     language={language}
                     routes={routes}
+                    parseRoute={parseRoute}
                     darkTheme={darkTheme}
                     setCurrentPage={setCurrentPage}
                 />

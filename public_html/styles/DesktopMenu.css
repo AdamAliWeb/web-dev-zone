@@ -1,0 +1,11 @@
+.desktop-menu {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 0.5rem;
+  padding-inline: 1.5rem;
+  z-index: 99;
+}/*# sourceMappingURL=DesktopMenu.css.map */

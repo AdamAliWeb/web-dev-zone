@@ -7,6 +7,7 @@ import "./NavMenu.scss";
 export default function NavMenu({
     language,
     routes,
+    parseRoute,
     darkTheme,
     setCurrentPage,
 }) {
@@ -49,11 +50,16 @@ export default function NavMenu({
                             <Link
                                 onClick={() => {
                                     handleClose();
-                                    handleRoute(file.route);
+                                    handleRoute(
+                                        parseRoute(file.fileName, index)
+                                    );
                                 }}
                                 className="nav-link nav-menu-link"
                                 key={index}
-                                to={`${language}/${file.route}`}
+                                to={`${language}/${parseRoute(
+                                    file.fileName,
+                                    index
+                                )}`}
                             >
                                 {file.title}
                             </Link>

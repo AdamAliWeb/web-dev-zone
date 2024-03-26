@@ -7,7 +7,7 @@ export default function useMarkdownChecker(fileName, language) {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`/assets/content/${language}/${fileName}.md`)
+        fetch(`/assets/content/${language}/${fileName}-${language}.md`)
             .then((res) => res.text())
             .then((res) => {
                 if (!res) throw new Error("Wrong Route");
@@ -29,7 +29,7 @@ export default function useMarkdownChecker(fileName, language) {
 
     const highlightCode = () => {
         hljs.highlightAll();
-        console.clear();
+        // console.clear();
     };
 
     return { post, loading, failedResponse, handleLinkTarget, highlightCode };

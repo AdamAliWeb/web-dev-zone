@@ -7,6 +7,7 @@ import "./MobileMenu.scss";
 export default function MobileMenu({
     language,
     routes,
+    parseRoute,
     changeLanguage,
     darkTheme,
     handleColorThemes,
@@ -33,6 +34,7 @@ export default function MobileMenu({
             <NavMenu
                 language={language}
                 routes={routes}
+                parseRoute={parseRoute}
                 darkTheme={darkTheme}
                 setCurrentPage={setCurrentPage}
             />

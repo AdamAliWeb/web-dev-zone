@@ -1,0 +1,16 @@
+.wdz-logo {
+  font-family: "Monomaniac One", monospace;
+  margin-top: -0.5rem;
+}
+.wdz-logo .wdz-logo-part {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.2509803922);
+}
+.wdz-logo .part-1 {
+  color: #202020;
+}
+.wdz-logo .part-2 {
+  color: #ffffff;
+}
+.wdz-logo .part-3 {
+  color: #dddddd;
+}/*# sourceMappingURL=WebDevZoneLogo.css.map */

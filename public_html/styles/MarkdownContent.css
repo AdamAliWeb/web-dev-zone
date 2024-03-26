@@ -1,0 +1,58 @@
+.separator, .markdown-content h2::after, .markdown-content h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.loader {
+  width: 4rem;
+  padding-block: 1rem;
+}
+
+.markdown-content h1 {
+  font-family: "Monomaniac One", monospace;
+  padding-bottom: 0.5rem;
+  position: relative;
+  text-align: center;
+}
+.markdown-content h1::after {
+  height: 5px;
+}
+.markdown-content h2 {
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+.markdown-content h2::after {
+  height: 3px;
+}
+.markdown-content .hljs {
+  border-radius: 0.25rem;
+}
+.markdown-content a {
+  transition: all 0.3s ease;
+}
+.markdown-content table {
+  margin: 1.5rem auto;
+}
+.markdown-content table td,
+.markdown-content table th {
+  padding: 0.5rem;
+  border: medium solid #eeeeee;
+}
+.markdown-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.markdown-content li {
+  text-align: start !important;
+}
+.markdown-content .hljs {
+  text-align: start;
+  white-space: pre-line;
+  word-break: break-all;
+}/*# sourceMappingURL=MarkdownContent.css.map */

@@ -1,184 +1,157 @@
 import { useState } from "react";
 
+const urlRegex = /#\/[a-z]{2}\/(.+)/;
+
 export default function useRoutes() {
-    const [currentPage, setCurrentPage] = useState("");
+    const [currentPage, setCurrentPage] = useState(() =>
+        location.hash.match(urlRegex) ? location.hash.match(urlRegex)[1] : ""
+    );
+
+    const parseRoute = (route, index) =>
+        index === 0 ? "" : route.toLowerCase().replace(/_/g, "-");
 
     const routes = {
         en: [
             {
-                fileName: `Introduction-en`,
-                route: "",
+                fileName: `Introduction`,
                 title: "Introduction",
             },
             {
-                fileName: `English_Learning-en`,
-                route: "english-learning",
+                fileName: `English_Learning`,
                 title: "English Learning",
             },
             {
-                fileName: `Initial_Setup-en`,
-                route: "initial-setup",
+                fileName: `Initial_Setup`,
                 title: "Initial Setup",
             },
             {
-                fileName: `Content_Compilation_and_Organization-en`,
-                route: "content-compilation-and-organization",
+                fileName: `Content_Compilation_and_Organization`,
                 title: "Content Compilation and Organization",
             },
             {
-                fileName: `Internet-en`,
-                route: "internet",
+                fileName: `Internet`,
                 title: "Internet",
             },
             {
-                fileName: `HTML-en`,
-                route: "html",
+                fileName: `HTML`,
                 title: "HTML",
             },
             {
-                fileName: `CSS-en`,
-                route: "css",
+                fileName: `CSS`,
                 title: "CSS",
             },
             {
-                fileName: `JavaScript-en`,
-                route: "javascript",
+                fileName: `JavaScript`,
                 title: "JavaScript",
             },
             {
-                fileName: `Git-en`,
-                route: "git",
+                fileName: `Git`,
                 title: "Git",
             },
             {
-                fileName: `JavaScript_Compilation-en`,
-                route: "javascript-compilation",
+                fileName: `JavaScript_Compilation`,
                 title: "JavaScript Compilation",
             },
             {
-                fileName: `JavaScript_Frameworks-en`,
-                route: "javascript-frameworks",
+                fileName: `JavaScript_Frameworks`,
                 title: "JavaScript Frameworks",
             },
             {
-                fileName: `CSS_Frameworks-en`,
-                route: "css-frameworks",
+                fileName: `CSS_Frameworks`,
                 title: "CSS Frameworks",
             },
             {
-                fileName: `CSS_Processing-en`,
-                route: "css-processing",
+                fileName: `CSS_Processing`,
                 title: "CSS Processing",
             },
             {
-                fileName: `Web_Procedure-en`,
-                route: "web-procedure",
+                fileName: `Web_Procedure`,
                 title: "Web Procedure",
             },
             {
-                fileName: `SEO-en`,
-                route: "seo",
+                fileName: `SEO`,
                 title: "SEO",
             },
             {
-                fileName: `Figma-en`,
-                route: "figma",
+                fileName: `Figma`,
                 title: "Figma",
             },
             {
-                fileName: `Extra-en`,
-                route: "extra",
+                fileName: `Extra`,
                 title: "Extra",
             },
         ],
         es: [
             {
-                fileName: `Introduction-es`,
-                route: "",
+                fileName: `Introduction`,
                 title: "Introducción",
             },
             {
-                fileName: `English_Learning-es`,
-                route: "english-learning",
+                fileName: `English_Learning`,
                 title: "Aprendizaje de Inglés",
             },
             {
-                fileName: `Initial_Setup-es`,
-                route: "initial-setup",
+                fileName: `Initial_Setup`,
                 title: "Configuración Inicial",
             },
             {
-                fileName: `Content_Compilation_and_Organization-es`,
-                route: "content-compilation-and-organization",
+                fileName: `Content_Compilation_and_Organization`,
                 title: "Organización y Recopilación de Contenido",
             },
             {
-                fileName: `Internet-es`,
-                route: "internet",
+                fileName: `Internet`,
                 title: "Internet",
             },
             {
-                fileName: `HTML-es`,
-                route: "html",
+                fileName: `HTML`,
                 title: "HTML",
             },
             {
-                fileName: `CSS-es`,
-                route: "css",
+                fileName: `CSS`,
                 title: "CSS",
             },
             {
-                fileName: `JavaScript-es`,
-                route: "javascript",
+                fileName: `JavaScript`,
                 title: "JavaScript",
             },
             {
-                fileName: `Git-es`,
-                route: "git",
+                fileName: `Git`,
                 title: "Git",
             },
             {
-                fileName: `JavaScript_Compilation-es`,
-                route: "javascript-compilation",
+                fileName: `JavaScript_Compilation`,
                 title: "Compilación de JavaScript",
             },
             {
-                fileName: `JavaScript_Frameworks-es`,
-                route: "javascript-frameworks",
+                fileName: `JavaScript_Frameworks`,
                 title: "Frameworks de JavaScript",
             },
             {
-                fileName: `CSS_Frameworks-es`,
-                route: "css-frameworks",
+                fileName: `CSS_Frameworks`,
                 title: "Frameworks de CSS",
             },
             {
-                fileName: `CSS_Processing-es`,
-                route: "css-processing",
+                fileName: `CSS_Processing`,
                 title: "Procesamiento de CSS",
             },
             {
-                fileName: `Web_Procedure-es`,
-                route: "web-procedure",
+                fileName: `Web_Procedure`,
                 title: "Procedimiento Web",
             },
             {
-                fileName: `SEO-es`,
-                route: "seo",
+                fileName: `SEO`,
                 title: "SEO",
             },
             {
-                fileName: `Figma-es`,
-                route: "figma",
+                fileName: `Figma`,
                 title: "Figma",
             },
             {
-                fileName: `Extra-es`,
-                route: "extra",
+                fileName: `Extra`,
                 title: "Extra",
             },
         ],
     };
 
-    return { routes, currentPage, setCurrentPage };
+    return { routes, currentPage, setCurrentPage, parseRoute };
 }

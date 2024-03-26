@@ -14,7 +14,7 @@ import MarkdownContent from "../components/MarkdownContent";
 import ErrorPage from "../components/ErrorPage";
 
 function App() {
-    const { routes, currentPage, setCurrentPage } = useRoutes();
+    const { routes, currentPage, setCurrentPage, parseRoute } = useRoutes();
     const { availableLanguages, language, changeLanguage } = useLanguages();
     const { darkTheme, handleColorThemes } = useDarkTheme();
     const { desktopLayout } = useDesktopLayout();
@@ -30,6 +30,7 @@ function App() {
                     <DesktopMenu
                         language={language}
                         routes={routes}
+                        parseRoute={parseRoute}
                         changeLanguage={changeLanguage}
                         darkTheme={darkTheme}
                         handleColorThemes={handleColorThemes}
@@ -53,7 +54,10 @@ function App() {
                                         <Route
                                             key={index}
                                             index={index < 1}
-                                            path={file.route}
+                                            path={parseRoute(
+                                                file.fileName,
+                                                index
+                                            )}
                                             element={
                                                 <MarkdownContent
                                                     fileName={file.fileName}
@@ -77,6 +81,7 @@ function App() {
                     <MobileMenu
                         language={language}
                         routes={routes}
+                        parseRoute={parseRoute}
                         changeLanguage={changeLanguage}
                         darkTheme={darkTheme}
                         handleColorThemes={handleColorThemes}
