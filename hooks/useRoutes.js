@@ -10,148 +10,230 @@ export default function useRoutes() {
     const parseRoute = (route, index) =>
         index === 0 ? "" : route.toLowerCase().replace(/_/g, "-");
 
-    const routes = {
-        en: [
-            {
-                fileName: `Introduction`,
+    const routes = [
+        {
+            fileName: `Introduction`,
+            en: {
                 title: "Introduction",
+                category: "Getting Started",
             },
-            {
-                fileName: `English_Learning`,
-                title: "English Learning",
-            },
-            {
-                fileName: `Initial_Setup`,
-                title: "Initial Setup",
-            },
-            {
-                fileName: `Content_Compilation_and_Organization`,
-                title: "Content Compilation and Organization",
-            },
-            {
-                fileName: `Internet`,
-                title: "Internet",
-            },
-            {
-                fileName: `HTML`,
-                title: "HTML",
-            },
-            {
-                fileName: `CSS`,
-                title: "CSS",
-            },
-            {
-                fileName: `JavaScript`,
-                title: "JavaScript",
-            },
-            {
-                fileName: `Git`,
-                title: "Git",
-            },
-            {
-                fileName: `JavaScript_Compilation`,
-                title: "JavaScript Compilation",
-            },
-            {
-                fileName: `JavaScript_Frameworks`,
-                title: "JavaScript Frameworks",
-            },
-            {
-                fileName: `CSS_Frameworks`,
-                title: "CSS Frameworks",
-            },
-            {
-                fileName: `CSS_Processing`,
-                title: "CSS Processing",
-            },
-            {
-                fileName: `Web_Procedure`,
-                title: "Web Procedure",
-            },
-            {
-                fileName: `SEO`,
-                title: "SEO",
-            },
-            {
-                fileName: `Figma`,
-                title: "Figma",
-            },
-            {
-                fileName: `Extra`,
-                title: "Extra",
-            },
-        ],
-        es: [
-            {
-                fileName: `Introduction`,
+            es: {
                 title: "Introducción",
+                category: "Empezando",
             },
-            {
-                fileName: `English_Learning`,
+        },
+        {
+            fileName: `English_Learning`,
+            en: {
+                title: "English Learning",
+                category: "Getting Started",
+            },
+            es: {
                 title: "Aprendizaje de Inglés",
+                category: "Empezando",
             },
-            {
-                fileName: `Initial_Setup`,
-                title: "Configuración Inicial",
+        },
+        {
+            fileName: `Content_Compilation_and_Organization`,
+            en: {
+                title: "Content Compilation & Organization",
+                category: "Getting Started",
             },
-            {
-                fileName: `Content_Compilation_and_Organization`,
+            es: {
                 title: "Organización y Recopilación de Contenido",
+                category: "Empezando",
             },
-            {
-                fileName: `Internet`,
+        },
+        {
+            fileName: `Initial_Setup`,
+            en: {
+                title: "Initial Setup",
+                category: "Getting Started",
+            },
+            es: {
+                title: "Configuración Inicial",
+                category: "Empezando",
+            },
+        },
+        {
+            fileName: `Internet`,
+            en: {
                 title: "Internet",
+                category: "Getting Started",
             },
-            {
-                fileName: `HTML`,
+            es: {
+                title: "Internet",
+                category: "Empezando",
+            },
+        },
+        {
+            fileName: `HTML`,
+            en: {
                 title: "HTML",
+                category: "Frontend Basics",
             },
-            {
-                fileName: `CSS`,
+            es: {
+                title: "HTML",
+                category: "Frontend Básico",
+            },
+        },
+        {
+            fileName: `CSS`,
+            en: {
                 title: "CSS",
+                category: "Frontend Basics",
             },
-            {
-                fileName: `JavaScript`,
+            es: {
+                title: "CSS",
+                category: "Frontend Básico",
+            },
+        },
+        {
+            fileName: `JavaScript`,
+            en: {
                 title: "JavaScript",
+                category: "Frontend Basics",
             },
-            {
-                fileName: `Git`,
+            es: {
+                title: "JavaScript",
+                category: "Frontend Básico",
+            },
+        },
+        {
+            fileName: `Git`,
+            en: {
                 title: "Git",
+                category: "Frontend Basics",
             },
-            {
-                fileName: `JavaScript_Compilation`,
+            es: {
+                title: "Git",
+                category: "Frontend Básico",
+            },
+        },
+        {
+            fileName: `JavaScript_Compilation`,
+            en: {
+                title: "JavaScript Compilation",
+                category: "Frontend Advanced",
+            },
+            es: {
                 title: "Compilación de JavaScript",
+                category: "Frontend Avanzado",
             },
-            {
-                fileName: `JavaScript_Frameworks`,
+        },
+        {
+            fileName: `JavaScript_Frameworks`,
+            en: {
+                title: "JavaScript Frameworks",
+                category: "Frontend Advanced",
+            },
+            es: {
                 title: "Frameworks de JavaScript",
+                category: "Frontend Avanzado",
             },
-            {
-                fileName: `CSS_Frameworks`,
+        },
+        {
+            fileName: `TypeScript`,
+            en: {
+                title: "TypeScript",
+                category: "Frontend Advanced",
+            },
+            es: {
+                title: "TypeScript",
+                category: "Frontend Avanzado",
+            },
+        },
+        {
+            fileName: `CSS_Frameworks`,
+            en: {
+                title: "CSS Frameworks",
+                category: "Frontend Advanced",
+            },
+            es: {
                 title: "Frameworks de CSS",
+                category: "Frontend Avanzado",
             },
-            {
-                fileName: `CSS_Processing`,
+        },
+        {
+            fileName: `CSS_Processing`,
+            en: {
+                title: "CSS Processing",
+                category: "Frontend Advanced",
+            },
+            es: {
                 title: "Procesamiento de CSS",
+                category: "Frontend Avanzado",
             },
-            {
-                fileName: `Web_Procedure`,
+        },
+        {
+            fileName: `Web_Procedure`,
+            en: {
+                title: "Web Procedure",
+                category: "Additional Content",
+            },
+            es: {
                 title: "Procedimiento Web",
+                category: "Contenido adicional",
             },
-            {
-                fileName: `SEO`,
+        },
+        {
+            fileName: `SEO`,
+            en: {
                 title: "SEO",
+                category: "Additional Content",
             },
-            {
-                fileName: `Figma`,
+            es: {
+                title: "SEO",
+                category: "Contenido adicional",
+            },
+        },
+        {
+            fileName: `Figma`,
+            en: {
                 title: "Figma",
+                category: "Additional Content",
             },
-            {
-                fileName: `Extra`,
+            es: {
+                title: "Figma",
+                category: "Contenido adicional",
+            },
+        },
+        {
+            fileName: `Web_Design`,
+            en: {
+                title: "Web Design",
+                category: "Additional Content",
+            },
+            es: {
+                title: "Diseño Web",
+                category: "Contenido adicional",
+            },
+        },
+        {
+            fileName: `Interview_Preparation`,
+            titleEn: "Interview Preparation",
+            titleEs: "Preparación para Entrevistas",
+            en: {
+                title: "Interview Preparation",
+                category: "Additional Content",
+            },
+            es: {
+                title: "Preparación para Entrevistas",
+                category: "Contenido adicional",
+            },
+        },
+        {
+            fileName: `Extra`,
+            en: {
                 title: "Extra",
+                category: "Additional Content",
             },
-        ],
-    };
+            es: {
+                title: "Extra",
+                category: "Contenido adicional",
+            },
+        },
+    ];
 
     return { routes, currentPage, setCurrentPage, parseRoute };
 }

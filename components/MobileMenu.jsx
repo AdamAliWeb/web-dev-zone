@@ -1,4 +1,3 @@
-import { DropdownButton } from "react-bootstrap";
 import NavMenu from "./NavMenu";
 import OptionsMenu from "./OptionsMenu";
 
@@ -16,21 +15,13 @@ export default function MobileMenu({
 }) {
     return (
         <section className="mobile-menu">
-            <DropdownButton
-                className="dropdown-btn"
-                key={"up-centered"}
-                id={`dropdown-button-drop-up-centered`}
-                title={""}
-                drop={"up-centered"}
-                variant="secondary"
-            >
-                <OptionsMenu
-                    changeLanguage={changeLanguage}
-                    darkTheme={darkTheme}
-                    handleColorThemes={handleColorThemes}
-                    currentPage={currentPage}
-                />
-            </DropdownButton>
+            <OptionsMenu
+                changeLanguage={changeLanguage}
+                darkTheme={darkTheme}
+                handleColorThemes={handleColorThemes}
+                currentPage={currentPage}
+            />
+
             <NavMenu
                 language={language}
                 routes={routes}

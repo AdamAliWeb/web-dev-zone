@@ -10,7 +10,7 @@
 
 ## Description
 
-Welcome to **WebDevZone**. Here, you'll find everything you need to become a skilled **Front-End** developer. My platform offers free, carefully selected online resources to help you at every step of your journey. Whether you're just starting out or want to improve your skills, I've gathered tutorials, guides, tools, and tips for you. The resources are not mine and they are not paid; they are in the public domain.
+This is a markdown previewer. On this website, I compile different resources and tips which are publicly accessible. I didn't create the content; I just organized it and put it in one place. This is helpful because I can keep all the information in one place and share it with others.
 
 > I started this project because I noticed that although there's a lot of information out there, beginners often find it hard to find the right resources for what they want to learn. Also, I wanted to gather all the tools and resources in one easy-to-access place for myself and others to use and share.
 
@@ -35,16 +35,11 @@ Explore the WebDevZone platform: **[WebDevZone](https://webdevzone.adamaliweb.co
 -   🟩 Git
 -   🟩 JavaScript Compilation
 -   🟩 JavaScript Frameworks
--   🟥 TypeScript
+-   🟩 TypeScript
+-   🟦 Next JS
 -   🟥 PWA
 -   🟩 CSS Frameworks
 -   🟩 CSS Processing
--   🟩 Web Procedure
--   🟩 SEO
--   🟩 Figma
--   🟦 Interview Preparation
--   🟥 Conclusion
--   🟩 Extra
 
 ### Backend:
 
@@ -56,9 +51,25 @@ Explore the WebDevZone platform: **[WebDevZone](https://webdevzone.adamaliweb.co
 -   🟥 Back-end ORM Frameworks
 -   🟥 Web Security
 
+### Extra
+
+-   🟩 Web Procedure
+-   🟩 SEO
+-   🟩 Figma
+-   🟩 Web Design
+-   🟩 Interview Preparation
+-   🟥 Conclusion
+-   🟩 Extra
+
 ## Issues to fix
 
--   Refactorize the styles to use more bootstrap
+-   Change the routes variable to be separately and change his structures from an object to an array
+
+-   Delete Bootstrap
+
+-   Delete SASS
+
+-   Update Design
 
 -   Read the website content entirely and check the text for:
 

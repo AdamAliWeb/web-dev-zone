@@ -50,7 +50,7 @@ function App() {
                         {availableLanguages.map((lang, index) => {
                             return (
                                 <Route key={index} path={`/${lang}`}>
-                                    {routes[lang].map((file, index) => (
+                                    {routes.map((file, index) => (
                                         <Route
                                             key={index}
                                             index={index < 1}
