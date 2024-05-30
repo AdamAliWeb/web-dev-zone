@@ -31,7 +31,7 @@ Currently, this platform will exclusively specialize in Front-end and web design
 
 Now that you have this context, let's start organizing what you should learn. Detailed information for each section will be available on this website, and alternatives will be mentioned in their respective sections. While not everything is required, they are recommended to enhance your knowledge and job opportunities. Below, I'll provide a comprehensive list of all the sections we'll cover:
 
-### Front-end
+### Getting Started
 
 -   Introduction
 
@@ -43,6 +43,8 @@ Now that you have this context, let's start organizing what you should learn. De
 
 -   Internet
 
+### Frontend Basics
+
 -   HTML
 
 -   CSS
@@ -51,9 +53,13 @@ Now that you have this context, let's start organizing what you should learn. De
 
 -   Git
 
+### Frontend Advanced
+
 -   JavaScript Compilation
 
 -   JavaScript Frameworks
+
+-   TypeScript
 
 -   CSS Frameworks
 
@@ -67,7 +73,9 @@ Now that you have this context, let's start organizing what you should learn. De
 
 -   Figma
 
--   Extra
+-   Web Design
+
+-   Interview Preparation
 
 ## Additional Resources
 

@@ -1,41 +1,92 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-import "./NavMenu.scss";
+import "./NavMenu.css";
 
 export default function NavMenu({
     language,
     routes,
     parseRoute,
-    darkTheme,
-    setCurrentPage,
+    closeModal,
+    handleRoute,
 }) {
-    const handleRoute = (route) => {
-        setCurrentPage(route);
-        window.scrollTo(0, 0);
-    };
+    let links = [];
+    let category = "";
 
     return (
-        <>
-            <button className="hamburger-btn menu-link" type="button">
-                <div className="bar-1"></div>
-                <div className="bar-2"></div>
-                <div className="bar-3"></div>
-            </button>
+        <section className="nav">
+            <article className="nav-header">
+                <h2 className="nav-title">Menu</h2>
+                <button className="close-modal" onClick={closeModal}></button>
+            </article>
+            <nav className="nav-menu">
+                {routes.map((file, index) => {
+                    if (file[language].category === false) return;
+                    if (!category) category = file[language].category;
 
-            <nav>
-                {routes.map((file, index) => (
-                    <Link
-                        onClick={() => {
-                            handleRoute(parseRoute(file.fileName, index));
-                        }}
-                        className="nav-link nav-menu-link"
-                        key={index}
-                        to={`${language}/${parseRoute(file.fileName, index)}`}
-                    >
-                        {file[language].title}
-                    </Link>
-                ))}
+                    if (category !== file[language].category) {
+                        const navSection = (
+                            <div className="nav-section" key={index}>
+                                <h4 className="nav-section-title">
+                                    {category}
+                                </h4>
+                                <div className="nav-links">{...links}</div>
+                            </div>
+                        );
+
+                        links = [
+                            <NavLink
+                                onClick={() => {
+                                    handleRoute(
+                                        parseRoute(file.fileName, index)
+                                    );
+                                    closeModal();
+                                }}
+                                className={`nav-link`}
+                                to={`${language}/${parseRoute(
+                                    file.fileName,
+                                    index
+                                )}`}
+                            >
+                                {file[language].title}
+                            </NavLink>,
+                        ];
+                        category = file[language].category;
+
+                        return navSection;
+                    }
+
+                    if (category === file[language].category) {
+                        links.push(
+                            <NavLink
+                                onClick={() => {
+                                    handleRoute(
+                                        parseRoute(file.fileName, index)
+                                    );
+                                    closeModal();
+                                }}
+                                to={`${language}/${parseRoute(
+                                    file.fileName,
+                                    index
+                                )}`}
+                                className={`nav-link`}
+                            >
+                                {file[language].title}
+                            </NavLink>
+                        );
+                    }
+
+                    if (index === routes.length - 1) {
+                        return (
+                            <div className="nav-section" key={index}>
+                                <h4 className="nav-section-title">
+                                    {category}
+                                </h4>
+                                <div className="nav-links">{...links}</div>
+                            </div>
+                        );
+                    }
+                })}
             </nav>
-        </>
+        </section>
     );
 }

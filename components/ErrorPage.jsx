@@ -1,5 +1,3 @@
-import "./ErrorPage.scss";
-
 export default function ErrorPage({ errorTitle }) {
     return (
         <article className="error-page">

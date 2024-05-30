@@ -59,17 +59,14 @@ Explore the WebDevZone platform: **[WebDevZone](https://webdevzone.adamaliweb.co
 -   🟩 Web Design
 -   🟩 Interview Preparation
 -   🟥 Conclusion
--   🟩 Extra
 
 ## Issues to fix
 
--   Change the routes variable to be separately and change his structures from an object to an array
+-   Organize and comment code
 
--   Delete Bootstrap
+-   Improve dropdown button so it allows to close it from outside
 
--   Delete SASS
-
--   Update Design
+-   Fix the tables design
 
 -   Read the website content entirely and check the text for:
 

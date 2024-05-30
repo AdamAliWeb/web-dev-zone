@@ -135,12 +135,12 @@ En esta serie de videos principal acerca de **CSS**, tendrás todo lo necesario 
 -   En el desarrollo web, es preferible aplicar estilos a clases en lugar de identificadores. Esto permite reutilizar estilos en varios elementos, simplifica el mantenimiento al centralizar los cambios, evita conflictos de especificidad, mantiene una clara separación entre estructura y diseño, se alinea con los estándares de la comunidad y ofrece una mayor flexibilidad para la colaboración y escalabilidad en proyectos grandes. Aquí tienes un ejemplo:
 
     ```css
-    /* MAL */
+    /* ❌ */
     #element {
         padding: 2rem;
     }
 
-    /* BIEN */
+    /* ✅ */
     .element {
         padding: 2rem;
     }
@@ -166,13 +166,13 @@ En esta serie de videos principal acerca de **CSS**, tendrás todo lo necesario 
 -   Emplea propiedades lógicas como `inline` y `block`. Dado que no todos los idiomas siguen la dirección izquierda a derecha del inglés, es crucial contar con un modo de escritura adaptable. Las propiedades lógicas permiten brindar apoyo a idiomas que pueden escribirse en sentido horizontal (como árabe, hebreo y urdu) o vertical (como chino, japonés y coreano). Además, suelen ser más breves y sencillas de redactar:
 
     ```css
-    /* MAL */
+    /* ❌ */
     .element {
         margin-left: 2rem;
         margin-right: 2rem;
     }
 
-    /* BIEN */
+    /* ✅ */
     .element {
         margin-inline: 2rem;
     }
@@ -183,12 +183,12 @@ En esta serie de videos principal acerca de **CSS**, tendrás todo lo necesario 
 -   Limita el uso de declaraciones abreviadas a casos donde sea necesario establecer explícitamente todos los valores disponibles (como `background`, `font`, etc.). El abuso de propiedades abreviadas puede llevar a un código desordenado con anulaciones innecesarias y efectos secundarios no deseados:
 
     ```css
-    /* MAL */
+    /* ❌ */
     .element {
         background: red;
     }
 
-    /* BIEN */
+    /* ✅ */
     .element {
         background-color: red;
     }
@@ -221,9 +221,9 @@ En esta serie de videos principal acerca de **CSS**, tendrás todo lo necesario 
 
 -   **[Responsive Web Design - FreeCodeCamp](https://www.freecodecamp.org/learn/2022/responsive-web-design/)** te ofrece un curso con ejercicios prácticos y con un certificado ampliamente reconocido.
 
--   **[💻 COMO crear una PAGINA WEB en HTML y CSS [PASO A PASO] Adaptable a DISPOSITIVOS MÓVILES](https://www.youtube.com/watch?v=HH_SMpxV7qQ)**
+-   **[💻 COMO crear una PAGINA WEB en HTML y CSS Adaptable a DISPOSITIVOS MÓVILES](https://www.youtube.com/watch?v=HH_SMpxV7qQ)**
 
--   **[💻 COMO crear una PAGINA WEB en HTML y CSS [PASO A PASO] Adaptable a DISPOSITIVOS MÓVILES #2](https://www.youtube.com/watch?v=1Lv8mJczfpg)**
+-   **[💻 COMO crear una PAGINA WEB en HTML y CSS Adaptable a DISPOSITIVOS MÓVILES #2](https://www.youtube.com/watch?v=1Lv8mJczfpg)**
 
 -   **[Peaky blinders-page con Html y Css](www.youtube.com/watch?v=ArhSODreNHc)**
 

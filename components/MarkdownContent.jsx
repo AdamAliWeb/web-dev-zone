@@ -1,7 +1,7 @@
 import MarkDown from "markdown-to-jsx";
 import useMarkdownChecker from "../hooks/useMarkdownChecker";
 
-import "./MarkdownContent.scss";
+import "./MarkdownContent.css";
 import ErrorPage from "./ErrorPage";
 
 export default function MarkdownContent({ fileName, language }) {

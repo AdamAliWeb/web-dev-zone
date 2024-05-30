@@ -28,17 +28,19 @@ El desarrollo web abarca dos vertientes fundamentales. El _Front-end_ se centra 
 
 Ahora que tienes este panorama, procedamos a organizar lo que necesitas aprender. La información detallada sobre cada elemento estará disponible en este sitio web, y las alternativas serán mencionadas en sus respectivas secciones. Aunque no todas son obligatorias, se recomiendan para optimizar el desarrollo, ampliar tu conocimiento y aumentar tus oportunidades laborales. A continuación, te presentamos una lista completa de los temas que abordaremos en este lugar:
 
-### Front-end
+### Empezando
 
 -   Introducción
 
 -   Aprendizaje de Inglés
 
--   Configuración Inicial
-
 -   Organización y Recopilación de Contenido
 
+-   Configuración Inicial
+
 -   Internet
+
+### Frontend Básico
 
 -   HTML
 
@@ -48,9 +50,13 @@ Ahora que tienes este panorama, procedamos a organizar lo que necesitas aprender
 
 -   Git
 
+### Frontend Avanzado
+
 -   Compilación de JavaScript
 
 -   Frameworks de JavaScript
+
+-   TypeScript
 
 -   Frameworks de CSS
 
@@ -64,7 +70,9 @@ Ahora que tienes este panorama, procedamos a organizar lo que necesitas aprender
 
 -   Figma
 
--   Extra
+-   Diseño Web
+
+-   Preparación para Entrevistas
 
 ## Aspectos adicionales
 

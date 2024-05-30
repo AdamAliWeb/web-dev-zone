@@ -1,0 +1,78 @@
+.dropdown {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.dropdown-title {
+    margin: 0;
+}
+
+.dropdown-menu {
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--black-05);
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 200%;
+    border-radius: 0.5rem;
+    background-color: var(--second-white);
+    pointer-events: none;
+    z-index: 1;
+    transition: all 0.3s ease-in;
+}
+
+.dropdown-title.dropdown-active {
+    color: var(--first-blue-light);
+}
+
+.dropdown-menu.dropdown-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown-menu.dropdown-active a {
+    pointer-events: initial;
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: var(--black-25);
+}
+
+.language-link {
+    text-decoration: none;
+    color: var(--black);
+    margin-block: 0.5rem;
+    transition: all 0.3s ease-in;
+}
+
+.language-link:hover {
+    color: var(--second-blue-light);
+}
+
+/* Dark Theme */
+.dark-theme .dropdown-title.dropdown-active {
+    color: var(--first-blue-dark);
+}
+
+.dark-theme .language-link {
+    color: var(--white);
+}
+
+.dark-theme .language-link:hover {
+    color: var(--second-blue-dark);
+}
+
+.dark-theme .dropdown-menu {
+    background-color: var(--second-black);
+}
+
+.dark-theme .separator {
+    background-color: var(--white-50);
+}

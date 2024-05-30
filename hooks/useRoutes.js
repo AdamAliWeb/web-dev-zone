@@ -7,10 +7,21 @@ export default function useRoutes() {
         location.hash.match(urlRegex) ? location.hash.match(urlRegex)[1] : ""
     );
 
-    const parseRoute = (route, index) =>
+    const parseRoute = (route, index = 0) =>
         index === 0 ? "" : route.toLowerCase().replace(/_/g, "-");
 
     const routes = [
+        {
+            fileName: `Home`,
+            en: {
+                title: false,
+                category: false,
+            },
+            es: {
+                title: false,
+                category: false,
+            },
+        },
         {
             fileName: `Introduction`,
             en: {
@@ -211,25 +222,12 @@ export default function useRoutes() {
         },
         {
             fileName: `Interview_Preparation`,
-            titleEn: "Interview Preparation",
-            titleEs: "Preparación para Entrevistas",
             en: {
                 title: "Interview Preparation",
                 category: "Additional Content",
             },
             es: {
                 title: "Preparación para Entrevistas",
-                category: "Contenido adicional",
-            },
-        },
-        {
-            fileName: `Extra`,
-            en: {
-                title: "Extra",
-                category: "Additional Content",
-            },
-            es: {
-                title: "Extra",
                 category: "Contenido adicional",
             },
         },

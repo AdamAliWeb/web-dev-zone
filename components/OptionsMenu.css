@@ -1,0 +1,96 @@
+.options-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 2px solid var(--black-25);
+    transition: all 0.3s ease-in;
+}
+
+.menu-link {
+    margin: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.language-btn {
+    font-family: var(--title-font);
+    font-size: var(--font-h3);
+    text-decoration: none;
+    color: var(--black);
+    transition: all 0.3s ease-in;
+}
+
+.language-btn:hover {
+    color: var(--second-blue) !important;
+}
+
+.theme-link {
+    width: 2.5rem;
+    height: auto;
+    padding: 0;
+    transition: all 0.3s ease-in;
+    background-color: transparent;
+}
+
+.theme-img {
+    width: 75%;
+    height: auto;
+    transition: all 0.3s ease-in;
+}
+
+.theme-img:hover {
+    transform: scale(1.2);
+}
+
+.hamburger-btn {
+    background-color: transparent;
+}
+
+.bar-1,
+.bar-2,
+.bar-3 {
+    width: 2rem;
+    height: 0.2rem;
+    margin-block: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--black);
+    transition: all 0.3s ease-in;
+}
+
+.hamburger-btn:hover .bar-1,
+.hamburger-btn:hover .bar-2,
+.hamburger-btn:hover .bar-3 {
+    background-color: var(--second-blue);
+}
+
+/* Dark Theme */
+.dark-theme .options-menu {
+    border-bottom: 2px solid var(--white-50);
+}
+
+.dark-theme .bar-1,
+.dark-theme .bar-2,
+.dark-theme .bar-3 {
+    background-color: var(--white);
+}
+
+.dark-theme .language-btn {
+    color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+    .options-menu {
+        justify-content: end;
+        border: none;
+    }
+
+    .dark-theme .options-menu {
+        border: none;
+    }
+
+    .menu-link {
+        margin-inline: 3rem;
+    }
+}

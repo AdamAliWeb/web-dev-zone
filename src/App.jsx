@@ -5,19 +5,15 @@ import "highlight.js/styles/atom-one-dark.css";
 import useRoutes from "../hooks/useRoutes";
 import useLanguages from "../hooks/useLanguages";
 import useDarkTheme from "../hooks/useDarkTheme";
-import useDesktopLayout from "../hooks/useDesktopLayout";
 
-import DesktopMenu from "../components/DesktopMenu";
-import MobileHeader from "../components/MobileHeader";
-import MobileMenu from "../components/MobileMenu";
 import MarkdownContent from "../components/MarkdownContent";
 import ErrorPage from "../components/ErrorPage";
+import Header from "../components/Header";
 
 function App() {
     const { routes, currentPage, setCurrentPage, parseRoute } = useRoutes();
     const { availableLanguages, language, changeLanguage } = useLanguages();
     const { darkTheme, handleColorThemes } = useDarkTheme();
-    const { desktopLayout } = useDesktopLayout();
 
     return (
         <div
@@ -26,20 +22,16 @@ function App() {
             }`}
         >
             <HashRouter>
-                {desktopLayout ? (
-                    <DesktopMenu
-                        language={language}
-                        routes={routes}
-                        parseRoute={parseRoute}
-                        changeLanguage={changeLanguage}
-                        darkTheme={darkTheme}
-                        handleColorThemes={handleColorThemes}
-                        currentPage={currentPage}
-                        setCurrentPage={setCurrentPage}
-                    />
-                ) : (
-                    <MobileHeader />
-                )}
+                <Header
+                    darkTheme={darkTheme}
+                    language={language}
+                    routes={routes}
+                    parseRoute={parseRoute}
+                    changeLanguage={changeLanguage}
+                    handleColorThemes={handleColorThemes}
+                    currentPage={currentPage}
+                    setCurrentPage={setCurrentPage}
+                />
 
                 <main className="main-content">
                     <Routes>
@@ -77,18 +69,6 @@ function App() {
                         />
                     </Routes>
                 </main>
-                {!desktopLayout && (
-                    <MobileMenu
-                        language={language}
-                        routes={routes}
-                        parseRoute={parseRoute}
-                        changeLanguage={changeLanguage}
-                        darkTheme={darkTheme}
-                        handleColorThemes={handleColorThemes}
-                        currentPage={currentPage}
-                        setCurrentPage={setCurrentPage}
-                    />
-                )}
             </HashRouter>
         </div>
     );
