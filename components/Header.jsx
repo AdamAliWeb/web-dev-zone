@@ -20,19 +20,23 @@ export default function Header({
 
     return (
         <header className="header">
-            <Link
-                className="wdz-logo"
-                to={`/${language}`}
-                onClick={() => {
-                    handleRoute(parseRoute("Home"));
-                }}
-            >
-                {darkTheme ? (
-                    <img src="./assets/img/wdz-light.svg" alt="WebDevZone" />
-                ) : (
-                    <img src="./assets/img/wdz-dark.svg" alt="WebDevZone" />
-                )}
-            </Link>
+            <div className="wdz-logo">
+                <Link
+                    to={`/${language}`}
+                    onClick={() => {
+                        handleRoute(parseRoute("Home"));
+                    }}
+                >
+                    {darkTheme ? (
+                        <img
+                            src="./assets/img/wdz-light.svg"
+                            alt="WebDevZone"
+                        />
+                    ) : (
+                        <img src="./assets/img/wdz-dark.svg" alt="WebDevZone" />
+                    )}
+                </Link>
+            </div>
 
             <OptionsMenu
                 language={language}
