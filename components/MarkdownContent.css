@@ -60,6 +60,36 @@
     word-break: break-all;
 }
 
+.markdown-content table {
+    width: 100%;
+    border-spacing: 0;
+    background-color: var(--black-05);
+    word-break: normal;
+}
+
+.markdown-content thead {
+    background-color: var(--black-10);
+    text-align: left;
+}
+
+.markdown-content tbody {
+    font-size: var(--font-small-text);
+}
+
+.markdown-content tr {
+    vertical-align: top;
+}
+
+.markdown-content td {
+    border-bottom: 1px solid var(--black-50);
+    padding-block: 1rem;
+}
+
+.markdown-content th,
+.markdown-content td {
+    padding-left: 0.25rem;
+}
+
 /* Dark Theme */
 .dark-theme .markdown-content {
     color: var(--white);
@@ -73,6 +103,14 @@
     border-bottom: 2px solid var(--white);
 }
 
+.dark-theme .markdown-content td {
+    border-bottom: 1px solid var(--white-50);
+}
+
+.dark-theme .markdown-content thead {
+    background-color: var(--white-50);
+}
+
 @media screen and (min-width: 768px) {
     .markdown-content h1,
     .markdown-content h2 {
@@ -81,5 +119,10 @@
 
     .markdown-content img {
         max-width: 75%;
+    }
+
+    .markdown-content th,
+    .markdown-content td {
+        padding-inline: 1rem;
     }
 }

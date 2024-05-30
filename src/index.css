@@ -39,6 +39,7 @@
     --font-h4: 1.25rem;
     --font-big-text: 1.125rem;
     --font-normal-text: 1rem;
+    --font-small-text: 0.75rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -49,6 +50,7 @@
         --font-h4: 1.938rem;
         --font-big-text: 1.5rem;
         --font-normal-text: 1.125rem;
+        --font-small-text: 0.875rem;
     }
 }
 
