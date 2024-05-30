@@ -2,11 +2,9 @@
 
 ## Technology Stack
 
-![React](https://adamaliweb.com/assets/technologies/react.svg)
-![React Router](https://adamaliweb.com/assets/technologies/react-router.svg)
-![SASS](https://adamaliweb.com/assets/technologies/sass.svg)
-![Vite](https://adamaliweb.com/assets/technologies/vite.svg)
-![Bootstrap](https://adamaliweb.com/assets/technologies/bootstrap.svg)
+-   **[React](https://react.dev/)**
+-   **[React Router](https://reactrouter.com/en/main)**
+-   **[Vite](https://vitejs.dev/)**
 
 ## Description
 
