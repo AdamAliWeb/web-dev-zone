@@ -60,13 +60,11 @@ Explore the WebDevZone platform: **[WebDevZone](https://webdevzone.adamaliweb.co
 
 ## Issues to fix
 
-<!-- -   Change Banner -->
-
 -   Organize and comment code
 
--   Improve dropdown button so it allows to close it from outside
+<!-- -   Improve dropdown button so it allows to close it from outside -->
 
-<!-- -   Fix the tables design -->
+<!-- -   Add the redirection to www -->
 
 -   Read the website content entirely and check the text for:
 

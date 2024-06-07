@@ -7,6 +7,7 @@
 
 .dropdown-title {
     margin: 0;
+    background-color: transparent;
 }
 
 .dropdown-menu {
@@ -22,8 +23,11 @@
     border-radius: 0.5rem;
     background-color: var(--second-white);
     pointer-events: none;
-    z-index: 1;
+    transform-origin: 0 0;
+    transform: translateY(-5%);
     transition: all 0.3s ease-in;
+    z-index: 1;
+    cursor: auto;
 }
 
 .dropdown-title.dropdown-active {
@@ -33,10 +37,11 @@
 .dropdown-menu.dropdown-active {
     visibility: visible;
     opacity: 1;
+    transform: translateY(0);
 }
 
-.dropdown-menu.dropdown-active a {
-    pointer-events: initial;
+.dropdown-menu.dropdown-active {
+    pointer-events: visible;
 }
 
 .separator {

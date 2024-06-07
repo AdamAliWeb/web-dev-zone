@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import "./OptionsMenu.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Dropdown from "./Dropdown";
 import ModalWindow from "./ModalWindow";
 import NavMenu from "./NavMenu";
@@ -20,6 +20,17 @@ export default function ({
     const [dropdownActive, setDropdownActive] = useState(false);
     const [modalActive, openModal, closeModal] = useModal(false);
 
+    const handleLanguage = (lang) => {
+        changeLanguage(lang);
+        window.scrollTo(0, 0);
+    };
+
+    const handleDropdown = (e) => {
+        dropdownActive ? setDropdownActive(false) : setDropdownActive(true);
+    };
+
+    const dropdownRef = useRef();
+
     useEffect(() => {
         if (modalActive) {
             document.querySelector("body").classList.add("modal-overflow-lock");
@@ -30,20 +41,27 @@ export default function ({
         }
     }, [modalActive]);
 
-    const handleLanguage = (lang) => {
-        changeLanguage(lang);
-        window.scrollTo(0, 0);
-    };
+    useEffect(() => {
+        const handler = (e) => {
+            if (
+                dropdownRef.current &&
+                !dropdownRef.current.contains(e.target)
+            ) {
+                setDropdownActive(false);
+            }
+        };
 
-    const handleDropdown = (e) => {
-        dropdownActive ? setDropdownActive(false) : setDropdownActive(true);
-    };
+        document.addEventListener("click", handler);
+
+        return () => document.removeEventListener("click", handler);
+    }, [dropdownRef]);
 
     return (
         <article className="options-menu">
             <Dropdown
                 dropdownActive={dropdownActive}
                 handleDropdown={handleDropdown}
+                dropdownRef={dropdownRef}
                 language={language}
                 handleLanguage={handleLanguage}
                 currentPage={currentPage}

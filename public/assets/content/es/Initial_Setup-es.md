@@ -30,7 +30,7 @@ La terminal o consola se refiere comúnmente a la interfaz de usuario de línea 
 
 Comenzaremos con un video que te brindará una comprensión completa sobre el uso de **Visual Studio Code**, además de proporcionarte valiosos consejos y trucos. Te recomiendo omitir lo que se encuentra después de la marca de 2 horas, 33 minutos y 30 segundos, ya que lo abordaremos en secciones posteriores. Además, no es necesario seguir todos los pasos detallados, la mayoría son opcionales. Este video está bien estructurado y es conciso, lo que lo convierte en una introducción perfecta. Sin más preámbulos, aquí tienes el enlace al video:
 
--   **[Curso Visual Studio Code & Emmet - jonmircha](www.youtube.com/watch?v=KpgVF0mXOUs)**
+-   **[Curso Visual Studio Code & Emmet - jonmircha](https://www.youtube.com/watch?v=KpgVF0mXOUs)**
 
 También te proporciono otro video que será útil una vez hayas utilizado **Visual Studio Code** por un tiempo. En este video, aprenderás a aplicar configuraciones personalizadas:
 

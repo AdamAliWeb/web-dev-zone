@@ -9,9 +9,9 @@
 
     /* Colors */
     --first-blue-light: #1c5bff;
-    --first-blue-dark: #1ca4ff;
-
     --second-blue-light: #241cff;
+
+    --first-blue-dark: #1ca4ff;
     --second-blue-dark: #7199ff;
 
     --black: #22252a;
@@ -114,12 +114,18 @@ img {
 .light-theme {
     --first-blue: var(--first-blue-light);
     --second-blue: var(--second-blue-light);
+    --second-blue-filter: var(--second-blue-filter-light);
     transition: all 0.3s ease-in;
+    --primary-color: var(--black);
+    --secondary-color: var(--white);
 }
 
 .dark-theme {
     --first-blue: var(--first-blue-dark);
     --second-blue: var(--second-blue-dark);
+    --second-blue-filter: var(--second-blue-filter-dark);
+    --primary-color: var(--white);
+    --secondary-color: var(--black);
     background-color: var(--black);
     color: var(--white);
     transition: all 0.3s ease-in;

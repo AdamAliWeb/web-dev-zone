@@ -4,22 +4,21 @@ import "./Dropdown.css";
 export default function Dropdown({
     dropdownActive,
     handleDropdown,
+    dropdownRef,
     language,
     handleLanguage,
     currentPage,
 }) {
     return (
-        <button
-            className="dropdown menu-link language-btn"
-            onClick={(e) => handleDropdown(e)}
-        >
-            <h3
-                className={`dropdown-title ${
+        <div ref={dropdownRef} className="dropdown menu-link language-btn">
+            <button
+                onClick={handleDropdown}
+                className={`menu-link language-btn dropdown-title ${
                     dropdownActive ? "dropdown-active" : ""
                 }`}
             >
                 {language.toUpperCase()}
-            </h3>
+            </button>
             <div
                 className={`dropdown-menu ${
                     dropdownActive ? "dropdown-active" : ""
@@ -28,7 +27,10 @@ export default function Dropdown({
                 <Link
                     className="language-link"
                     to={`/en${currentPage ? "/" + currentPage : ""}`}
-                    onClick={() => handleLanguage("en")}
+                    onClick={() => {
+                        handleDropdown();
+                        handleLanguage("en");
+                    }}
                 >
                     EN
                 </Link>
@@ -36,11 +38,14 @@ export default function Dropdown({
                 <Link
                     className="language-link"
                     to={`/es${currentPage ? "/" + currentPage : ""}`}
-                    onClick={() => handleLanguage("es")}
+                    onClick={() => {
+                        handleDropdown();
+                        handleLanguage("es");
+                    }}
                 >
                     ES
                 </Link>
             </div>
-        </button>
+        </div>
     );
 }
