@@ -66,6 +66,8 @@ Explore the WebDevZone platform: **[WebDevZone](https://webdevzone.adamaliweb.co
 
 <!-- -   Add the redirection to www -->
 
+<!-- -   Fix banner -->
+
 -   Read the website content entirely and check the text for:
 
     -   One Line Code - ``
@@ -74,3 +76,10 @@ Explore the WebDevZone platform: **[WebDevZone](https://webdevzone.adamaliweb.co
     -   Links - bold
     -   Text within parenthesys - Italic
     -   Definitions in english on another languages - Italic
+
+## Content
+
+### Introduction
+
+-   Specify bootcamps purpose
+-   Change full stack sentence

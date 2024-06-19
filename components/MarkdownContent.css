@@ -53,13 +53,6 @@
     list-style-type: circle;
 }
 
-.hljs {
-    border-radius: 0.25rem;
-    text-align: start;
-    white-space: pre-line;
-    word-break: break-all;
-}
-
 .markdown-content table {
     width: 100%;
     border-spacing: 0;
@@ -88,6 +81,13 @@
 .markdown-content th,
 .markdown-content td {
     padding-left: 0.25rem;
+}
+
+.hljs {
+    border-radius: 0.25rem;
+    text-align: start;
+    white-space: pre-line;
+    word-break: break-all;
 }
 
 /* Dark Theme */

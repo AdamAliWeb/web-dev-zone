@@ -22,7 +22,7 @@ Es importante señalar que algunas personas eligen estudiar programación única
 
 ## Enfoque de desarrollo
 
-El desarrollo web abarca dos vertientes fundamentales. El _Front-end_ se centra en la apariencia visual y en la funcionalidad principal de la página, mientras que el _Back-end_ se encarga de la gestión, almacenamiento, organización y entrega de la información que circula en el sitio web. Además, existen otras disciplinas relacionadas como _DevOps_ y diseño web. Actualmente, este espacio estará dedicado exclusivamente al ámbito del _Front-End_ y diseño web. Sin embargo, en un futuro próximo, veré la posibilidad de agregar la parte del _Back-End_ y así abarcando la _Full-Stack_ (quien domina tanto el _Front-End_ como el _Back-End_). Si te interesa aprender _Back-End_ o ser _Full-Stack_ te incito a buscar otros recursos en línea.
+El desarrollo web abarca dos vertientes fundamentales. El _Front end_ se centra en la apariencia visual y en la funcionalidad principal de la página, mientras que el _Back end_ se encarga de la gestión, almacenamiento, organización y entrega de la información que circula en el sitio web. Además, existen otras disciplinas relacionadas como _DevOps_ y diseño web. Actualmente, este espacio estará dedicado exclusivamente al ámbito del _Front End_ y diseño web. Sin embargo, en un futuro próximo, veré la posibilidad de agregar la parte del _Back End_ y así abarcando la _Full Stack_ (quien domina tanto el _Front End_ como el _Back End_). Si te interesa aprender _Back End_ o ser _Full Stack_ te incito a buscar otros recursos en línea.
 
 ## Tecnologías y lenguajes
 
@@ -78,13 +78,11 @@ Ahora que tienes este panorama, procedamos a organizar lo que necesitas aprender
 
 A continuación, te presentaré contenido adicional que agilizará y enriquecerá tu proceso de aprendizaje. Quiero reiterarte que esta página no busca ser un curso completo, sino más bien una recopilación y organización de cursos. Su propósito es proporcionarte una experiencia de aprendizaje fluida y sin complicaciones. Aquí encontrarás algunos recursos valiosos:
 
--   **[RoadMap](https://roadmap.sh/frontend)**: Aquí encontrarás una visión completa de todas las opciones y detalles sobre cada ruta de aprendizaje.
+-   **[RoadMap](https://roadmap.sh)**: Aquí encontrarás una visión completa de todas las opciones y detalles sobre cada ruta de aprendizaje.
 
 -   **[FreeCodeCamp](https://www.freecodecamp.org/learn)**: Este equipo ofrece cursos gratuitos y certificaciones reconocidas en el mundo de la programación.
 
 -   **[WebDev](https://web.dev/learn/)**: Esta página es ideal para aprender conceptos básicos y contenidos más avanzados sobre desarrollo web.
-
--   **[JonMircha](https://jonmircha.com/cursos)**: Este es el sitio de un respetado desarrollador web y educador en la comunidad hispana. JonMircha proporciona cursos gratuitos de desarrollo web en YouTube y los organiza en su plataforma web.
 
 -   **[Chrome DevTools](https://developer.chrome.com/docs/devtools/)** es la guía oficial de Google sobre las herramientas para desarrolladores de Chrome.
 

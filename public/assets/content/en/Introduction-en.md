@@ -81,7 +81,7 @@ Now that you have this context, let's start organizing what you should learn. De
 
 Lastly, I'd like to offer you some additional content to enhance the agility and effectiveness of your learning process. It's important to note that this page is not a complete course on its own; it's a curated compilation of publicly available courses designed to facilitate a smoother learning experience. Below are some incredibly useful resources:
 
--   **[RoadMap](https://roadmap.sh/frontend)**: This provides learning paths for various programming scopes.
+-   **[RoadMap](https://roadmap.sh)**: This provides learning paths for various programming scopes.
 
 -   **[FreeCodeCamp](https://www.freecodecamp.org/learn)**: This platform offers a comprehensive list of free courses and globally recognized certificates in the programming world.
 
